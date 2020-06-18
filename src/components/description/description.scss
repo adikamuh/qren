@@ -1,0 +1,36 @@
+.desc-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    
+    color: white;
+    .desc-img{
+        border-radius: 25px;
+        width: 383px;
+        height: 327px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        .woman{
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+
+            background-repeat: no-repeat;
+        }
+    }
+
+    .desc-content{
+        width: 65%;
+        padding: 0;
+        h3{
+            margin: 0;
+        }
+        p{
+            width: 80%;
+            margin: 1rem 0;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.benefit-bg-qr{
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    .benefit-bg-phone{
+        height: inherit;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .benefit-wrapper{
+            h2{
+                text-align: center;
+            }
+        }
+    }
+}

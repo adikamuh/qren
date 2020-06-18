@@ -1,0 +1,18 @@
+.benefit-component{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .benefit-text{
+        margin-left: 1rem;
+        margin-top: 0.3rem;
+        h4{
+            letter-spacing: 0.05em;
+            line-height: 32px;
+            margin-bottom: 0.25em !important;
+        }
+        h4,p{
+            margin: 0;
+        }
+    }
+}

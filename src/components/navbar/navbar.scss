@@ -1,0 +1,40 @@
+.nav{
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style-type: none;
+            
+            .nav-item{
+                margin: 0 1rem;
+            }
+        }
+
+        .nav-right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .login{
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.1em;
+
+            display: flex;
+            align-items: center;
+            margin-right: 2.5rem;
+            img{
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
