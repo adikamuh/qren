@@ -5,8 +5,30 @@ body{
 }
 
 .container{
-  padding: 0 6%;
+  margin: 6rem 0;
+  padding: 0 10%;
   width: 100%;
 
   box-sizing: border-box;
+}
+
+.btn-primary{
+  background: #ED1C24;
+  border-radius: 6px;
+  border: none;
+  padding: 0.5rem 1rem;
+
+  color: white;
+  cursor: pointer;
+}
+
+.arrow{
+  padding: 1rem 4rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    margin-left: 0.5rem;
+  }
 }

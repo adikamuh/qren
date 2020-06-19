@@ -1,0 +1,39 @@
+.banner-container{
+    width: 32%;
+    height: 178px;
+    background: #FFFFFF;
+    /* shadow soft */
+
+    box-shadow: 0px 4px 20px rgba(67, 0, 0, 0.15);
+    border-radius: 20px;
+
+    .banner-wrapper{
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .banner-title,.banner-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .banner-title{
+            height: 35%;
+        }
+        .banner-content{
+            background-color: #ED1C24;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            border-radius: 0px 0px 20px 20px;
+            height: 75%;
+
+            color: white;
+            padding: 0 2.7rem;
+        }
+    }
+}

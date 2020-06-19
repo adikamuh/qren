@@ -1,0 +1,36 @@
+.partner{
+    width: 100%;
+    .partner-wrapper{
+        width: inherit;
+        .merchant-logo,.partner-logo{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .partner-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;
+            button{
+                box-sizing: border-box;
+                border: none;
+                background: none;
+                border-bottom: 2px solid #BDBDBD;
+                width: 285px;
+                height: 42px;
+                text-align: start center;
+                cursor: pointer;
+            }
+            .active{
+                color: #ED1C24;
+                border-bottom: 5px solid #ED1C24;
+            }
+
+            button:focus{
+                outline: none;
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@ import iconProfile from '../../assets/ic_profile.png'
 class Navbar extends React.Component{
     render(){
         return(
-            <div className="nav container">
+            <div className="nav">
                 <nav>
                     <Link ><img src={navLogo} alt="Logo"></img></Link>
                     <ul className="nav-list">

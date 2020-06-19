@@ -10,7 +10,7 @@ class Description extends React.Component{
     render(){
         const h3 = {
             lineHeight: '35px',
-            letterSpacing: '0.005em'
+            letterSpacing: '0.005em',
         }
 
         const body1 = {

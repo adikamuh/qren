@@ -76,7 +76,7 @@ class Benefit extends React.Component{
         ]
 
         const benefitComponents = benefitsData.map(
-            benefit => <BenefitComponent key={benefit.id} {...benefit} />
+            benefit => <BenefitComponent key={benefit.key} {...benefit} />
         )
 
         return(
@@ -84,7 +84,7 @@ class Benefit extends React.Component{
                 <div className="benefit-bg-qr" style={{backgroundImage:'url('+bgQr+')'}}>
                     <div className="benefit-bg-phone" style={{backgroundImage:'url('+bgPhone+')'}}>
                         <div className="benefit-wrapper">
-                            <h2 className="text-bold" style={{letterSpacing:'0.005em'}}>MAKIN UNTUNG DENGAN 5 KELEBIHAN QREN</h2>
+                            <h2 className="text-bold" style={{letterSpacing:'0.005em',marginBottom:'5rem'}}>MAKIN UNTUNG DENGAN 5 KELEBIHAN QREN</h2>
                             {benefitComponents}
                         </div>
                     </div>
