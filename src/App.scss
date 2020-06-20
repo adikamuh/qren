@@ -21,6 +21,39 @@ body{
   color: white;
   cursor: pointer;
 }
+.btn-primary:focus{
+  outline: none;
+}
+.btn-primary:hover{
+  background: #FF686E;
+}
+.btn-primary:active{
+  background: #B5151B;
+}
+
+
+
+.btn-pasive{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #ED1C24;
+
+  border: 1.5px solid #ED1C24;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: none;
+}
+.btn-pasive:hover{
+  background: #ED1C24;
+  color: #FFFFFF;
+}
+.btn-pasive:focus{
+  outline: none;
+}
+
+
 
 .arrow{
   padding: 1rem 4rem;
@@ -32,3 +65,4 @@ body{
     margin-left: 0.5rem;
   }
 }
+
