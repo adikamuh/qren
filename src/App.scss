@@ -1,3 +1,7 @@
+// STYLEGUIDE
+$base-color: #ED1C24;
+// END STYLEGUIDE
+
 body{
   font-family: Ubuntu;
 
@@ -10,6 +14,10 @@ body{
   width: 100%;
 
   box-sizing: border-box;
+}
+
+.top{
+  margin-top: 94px;
 }
 
 .btn-primary{

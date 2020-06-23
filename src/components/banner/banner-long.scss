@@ -1,0 +1,32 @@
+.banner-long-wrapper{
+    width: 100%;
+    height: 205px;
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ED1C24;
+    border-radius: 25px;
+
+    .phone-img{
+        position: absolute;
+        margin-left: 8%;
+    }
+
+
+    .content{
+        width: 55%;
+        p{
+            line-height: 24px;
+            /* or 150% */
+        
+            letter-spacing: 0.01em;
+    
+            /* white */
+    
+            color: #FFFFFF;
+        }
+    } 
+}

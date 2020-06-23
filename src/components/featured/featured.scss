@@ -14,11 +14,29 @@
         }
 
         .featured-details{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
             .details-left{
-                width: 35%;
+                margin-right: 1.5rem;
+            }
+            .details-right{
+                width: 630px;
+                box-sizing: border-box;
+                // padding: 2rem;
+
+                .slick-active{
+                    .custom-dots {
+                        background-color: #ED1C24 !important;
+                        width: 32px !important;
+                        border-radius: 350% !important;
+                    }
+                }
             }
 
-            button{
+            .btn-primary{
                 margin-top: 5rem;
             }
         }

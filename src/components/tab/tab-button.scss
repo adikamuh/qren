@@ -1,0 +1,19 @@
+.btn-tab{
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #BDBDBD;
+    width: 285px;
+    height: 42px;
+    text-align: start center;
+    cursor: pointer;
+    color: #4F4F4F;
+}
+.btn-tab-active{
+    color: #ED1C24;
+    border-bottom: 5px solid #ED1C24;
+}
+
+.btn-tab:focus{
+    outline: none;
+}

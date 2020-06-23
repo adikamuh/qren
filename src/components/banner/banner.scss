@@ -1,7 +1,8 @@
 .banner-container{
-    width: 32%;
-    height: 178px;
+    width: 24%;
+    height: 226px;
     background: #FFFFFF;
+    box-sizing: border-box;
     /* shadow soft */
 
     box-shadow: 0px 4px 20px rgba(67, 0, 0, 0.15);
@@ -22,7 +23,11 @@
         }
 
         .banner-title{
-            height: 35%;
+            height: 30%;
+            h4{
+                font-size: 22
+                px;
+            }
         }
         .banner-content{
             background-color: #ED1C24;
@@ -33,7 +38,11 @@
             height: 75%;
 
             color: white;
-            padding: 0 2.7rem;
+            padding: 0 1rem;
+
+            .body2{
+                font-size: 15px;
+            }
         }
     }
 }

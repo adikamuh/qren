@@ -20,8 +20,8 @@ class Benefit extends React.Component{
                 icon: icShield,
                 description: "Sistem kami menjamin keamanan dana dan transaksi Anda",
                 style:{
-                    left: '626px',
-                    position: 'absolute',
+                    marginLeft: '30%',
+                    position: 'relative',
                     width: '420px'
                 }
             },
@@ -31,10 +31,10 @@ class Benefit extends React.Component{
                 icon: icRp,
                 description: "Dapatkan penghasilan tambahan melalui QRen Loket Bayar",
                 style:{
-                    marginTop: '7rem',
-                    marginLeft: '5rem',
-                    position: 'absolute',
-                    width: '330px'
+                    marginTop: '3%',
+                    marginLeft: '5%',
+                    position: 'relative',
+                    width: '284px'
                 }
             },
             {
@@ -43,9 +43,9 @@ class Benefit extends React.Component{
                 icon: icCart,
                 description: "Cukup satu kode QR dari QRen untuk semua jenis pembayaran dari dompet digital apa pun",
                 style:{
-                    marginTop: '15rem',
-                    marginLeft: '58rem',
-                    position: 'absolute',
+                    marginTop: '-10%',
+                    marginLeft: '70%',
+                    position: 'relative',
                     width: '350px'
                 }
             },
@@ -55,9 +55,9 @@ class Benefit extends React.Component{
                 icon: icGraph,
                 description: "Pantau dan kelola riwayat transaksi bisnis Anda melalui dashboard",
                 style:{
-                    marginTop: '34rem',
-                    marginLeft: '5rem',
-                    position: 'absolute',
+                    marginTop: '10%',
+                    marginLeft: '5%',
+                    position: 'relative',
                     width: '420px'
                 }
             },
@@ -67,9 +67,9 @@ class Benefit extends React.Component{
                 icon: icQr,
                 description: "Nikmati sistem pembayaran khusus yang dapat disesuaikan dengan kebutuhan model bisnis Anda",
                 style:{
-                    marginTop: '34rem',
-                    marginLeft: '45rem',
-                    position: 'absolute',
+                    marginTop: '-8%',
+                    marginLeft: '60%',
+                    position: 'relative',
                     width: '510px'
                 }
             },

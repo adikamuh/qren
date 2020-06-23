@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Router } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './navbar.scss'
 
 import navLogo from '../../assets/logo.png'
@@ -10,9 +10,9 @@ class Navbar extends React.Component{
         return(
             <div className="nav">
                 <nav>
-                    <Link ><img src={navLogo} alt="Logo"></img></Link>
+                    <Link to="/"><img src={navLogo} alt="Logo"></img></Link>
                     <ul className="nav-list">
-                        <li className="nav-item caption"><Link >PRODUK & BISNIS</Link></li>
+                        <li className="nav-item caption"><Link to="/product">PRODUK & BISNIS</Link></li>
                         <li className="nav-item caption"><Link >FITUR & LAYANAN</Link></li>
                         <li className="nav-item caption"><Link >PROMO</Link></li>
                         <li className="nav-item caption"><Link >MITRA & PARTNER</Link></li>

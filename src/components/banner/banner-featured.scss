@@ -1,0 +1,79 @@
+.banner-featured-container{
+    width: 630px;
+    height: 312px;
+    display: flex;
+    align-items: center;
+    
+    .section-left{
+        width: 40%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border-radius: 21px 0px 0px 21px;
+    }
+    .section-right{
+        border-radius:0 21px 21px 0px;
+        width: 60%;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: #ED1C24;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+
+        padding: 3rem;
+        h5{
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20.8302px;
+            line-height: 28px;
+            /* or 133% */
+
+            letter-spacing: 0.05em;
+
+            /* white */
+
+            color: #FFFFFF;
+            margin: 0;
+        }
+        p{
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15.6226px;
+            line-height: 22px;
+            /* or 139% */
+
+            letter-spacing: 0.05em;
+
+            /* white */
+
+            color: #FFFFFF;
+        }
+    }
+
+    .float-object{
+        position: absolute;
+        margin-top: -6rem;
+        margin-left: 13rem;
+        background: #FFFFFF;
+        box-shadow: 0px 3.4717px 17.3585px rgba(67, 0, 0, 0.15);
+        border-radius: 17.3585px;
+        width: 80px;
+        height: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 70px;
+        }
+    }
+}
+
+.slide-custom{
+    padding: 0 1rem;
+}
