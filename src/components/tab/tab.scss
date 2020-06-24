@@ -3,4 +3,13 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
+    
+}
+
+.tab-content-active{
+    display: block;
+}
+
+.tab-content{
+    display: none;
 }

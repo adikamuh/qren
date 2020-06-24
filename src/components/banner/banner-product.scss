@@ -16,19 +16,20 @@
         .banner-title{
             display: flex;
             justify-content: flex-end;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
 
             height: 70%;
             color: white;
-            padding: 2rem;
+            padding: 1rem 2rem;
             h3{
                 margin: 0;
                 letter-spacing: 0.005em;
+                text-align: left;
             }
             img{
-                position: absolute;
-                margin-top: -80px;
+                // position: absolute;
+                // margin-top: -80px;
             }
         }
         .banner-caption{
@@ -36,7 +37,7 @@
             border-radius: 0 0 20px 20px;
             background-color: #ffffff;
             color: #333333;
-            padding: 1.5rem 1.5rem 0rem 1.5rem;
+            padding: 1.5rem 1.5rem 0rem 2rem;
             p{
                 margin: 0;
             }

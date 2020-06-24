@@ -15,10 +15,10 @@ class CoverComponent extends React.Component{
                     
                     <div className="cover-button">
                         <Link className="button btn-pasive"><img src={iconPlay} alt="Click to play video"></img>PLAY VIDEO</Link>
-                        <Link><img src={iconPs} width="200px" alt="Download on PlayStore"></img></Link>
+                        <Link><img className="playstore" src={iconPs} width="200px" alt="Download on PlayStore"></img></Link>
                     </div>
 
-                    <img src={illustration} alt=""></img>
+                    <img className="illustration1" src={illustration} alt=""></img>
                 </div>
             </div>
         )

@@ -42,3 +42,60 @@
         }
     }
 }
+
+@media screen and (max-width: 425px){
+    .featured{
+        .featured-wrapper{
+            padding: 2rem 0;
+
+            .featured-banner{
+                display: none;
+            }
+
+            .featured-details{
+                .details-left{
+                    margin: 0;
+                    h3{
+                        font-size: 16px;
+                        line-height: 24px;
+                        /* or 150% */
+
+                        letter-spacing: 0.01em !important;
+
+                        /* #333333 */
+
+                        color: #333333 !important;
+                        margin-bottom: 0.5rem;
+                    }
+                    p{
+                        margin: 0;
+                        font-size: 16px;
+                        line-height: 22px;
+                        /* or 137% */
+
+                        letter-spacing: 0.03em;
+
+                        /* #333333 */
+
+                        color: #333333;
+                    }
+                    .btn-primary{
+                        margin-top: 1rem;
+                        padding: 1rem 0;
+                        width: 100%;
+                        border-radius: 6px;
+
+                        font-size: 14px;
+                        line-height: 16px;
+                        letter-spacing: 0.1em;
+
+                    }
+                }
+
+                .details-right{
+                    display: none;
+                }
+            }
+        }
+    }
+}

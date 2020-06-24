@@ -81,6 +81,9 @@ class Benefit extends React.Component{
 
         return(
             <div className="container">
+                <div className="benefit-title-mobile">
+                    <h2 className="text-bold" style={{letterSpacing:'0.005em',marginBottom:'1rem',textAlign: 'center'}}>MAKIN UNTUNG DENGAN 5 KELEBIHAN QREN</h2>
+                </div>
                 <div className="benefit-bg-qr" style={{backgroundImage:'url('+bgQr+')'}}>
                     <div className="benefit-bg-phone" style={{backgroundImage:'url('+bgPhone+')'}}>
                         <div className="benefit-wrapper">
@@ -88,6 +91,10 @@ class Benefit extends React.Component{
                             {benefitComponents}
                         </div>
                     </div>
+                </div>
+
+                <div className="benefit-content-mobile">
+                    {benefitComponents}
                 </div>
             </div>
         )

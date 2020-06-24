@@ -16,3 +16,26 @@
         }
     }
 }
+
+.benefit-component-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 425px){
+    .benefit-component{
+        display: none;
+    }
+
+    .benefit-component-mobile{
+        display: block;
+        text-align: center;
+        h4{
+            color: #333333;
+            margin-bottom: 0;
+        }
+        p{
+            color: #4f4f4f;
+            margin-top: 0;
+        }
+    }
+}

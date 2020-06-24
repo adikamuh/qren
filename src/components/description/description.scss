@@ -34,3 +34,37 @@
         }
     }
 }
+
+.desc-content-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 425px){
+    .desc-wrapper{
+        border-radius: 15px;
+        padding: 0;
+        padding-right: 1rem;
+        .desc-img{
+            // border-radius: 15px;
+            width: 140px;
+            height: 106px;
+            .woman{
+                background-size: cover;
+                border-radius: 15px;
+            }
+        }
+        .desc-content{
+            margin-left: 1rem;
+            p, a{
+                display: none;
+            }
+        }
+        
+    }
+    .desc-content-mobile{
+        p{
+            color: #333333;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

@@ -8,17 +8,7 @@ import { Link } from 'react-router-dom'
 
 class Description extends React.Component{
     render(){
-        const h3 = {
-            lineHeight: '35px',
-            letterSpacing: '0.005em',
-        }
-
-        const body1 = {
-            fontSize: '17px',
-            lineHeight: '25px',
-            letterSpacing: '0.05em'
-        }
-
+        
         const link = {
             color: '#F2C94C',
             lineHeight: '16px',
@@ -41,11 +31,20 @@ class Description extends React.Component{
                     </div>
 
                     <div className="desc-content">
-                        <h3 className="text-bold" style={h3}>QRen hadir untuk memudahkan proses transaksi dagang, serta meningkatkan potensi bisnis Anda.</h3>
-                        <p className="body1" style={body1}>QRen adalah platform kode pembayaran berbasis QR yang sudah berstandar nasional QRIS. Kami berkomitmen untuk memberikan solusi transaksi untuk sistem pembayaran yang lebih mudah dan cepat. Serta dapat disesuaikan dengan apa pun jenis usaha yang Anda miliki.</p>
+                        <h3 className="text-bold" >QRen hadir untuk memudahkan proses transaksi dagang, serta meningkatkan potensi bisnis Anda.</h3>
+                        <p className="body1">QRen adalah platform kode pembayaran berbasis QR yang sudah berstandar nasional QRIS. Kami berkomitmen untuk memberikan solusi transaksi untuk sistem pembayaran yang lebih mudah dan cepat. Serta dapat disesuaikan dengan apa pun jenis usaha yang Anda miliki.</p>
                         <Link to="" className="button" style={link}>Pelajari lebih lanjut <img src={rightArrow} alt="arrow"></img></Link>
                     </div>
+
                 </div>
+
+
+                <div className="desc-content-mobile">
+                    <p className="body2">QRen adalah platform kode pembayaran berbasis QR yang sudah berstandar nasional QRIS. Kami berkomitmen untuk memberikan solusi transaksi untuk sistem pembayaran yang lebih mudah dan cepat. Serta dapat disesuaikan dengan apa pun jenis usaha yang Anda miliki.</p>
+                    <Link to="" className="caption text-bold" style={link}>Pelajari lebih lanjut <img src={rightArrow} alt="arrow"></img></Link>
+                </div>
+
+
             </div>
         )
     }

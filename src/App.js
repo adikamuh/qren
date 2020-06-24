@@ -10,7 +10,7 @@ import Product from './pages/product/product';
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Switch>
         <Route path="/" component={Home} exact></Route>

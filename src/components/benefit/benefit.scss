@@ -15,3 +15,28 @@
         }
     }
 }
+.benefit-title-mobile, .benefit-content-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 425px){
+    .benefit-title-mobile{
+        display: block;
+    }
+    .benefit-bg-qr{
+        height: 203px;
+        width: 280px;
+        background-size: contain;
+        margin: 0 auto;
+        .benefit-bg-phone{
+            background-size: contain;
+            .benefit-wrapper{
+                display: none;
+            }
+        }
+    }
+
+    .benefit-content-mobile{
+        display: block;
+    }
+}

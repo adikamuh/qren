@@ -19,3 +19,33 @@
         }
     }
 }
+
+@media screen and (max-width: 425px){
+    .cover .cover-wrapper .cover-button .button{
+        padding: 0 1rem;
+        height: 37px;
+        border-radius: 3.5px;
+        border: 0.898438px solid #ED1C24;
+        img{
+            height: 7.6px;
+        }
+    }
+
+    .cover{
+        .cover-wrapper{
+            .cover-button{
+                margin-top: 1rem;
+                .playstore{
+                    height: 37px;
+                    width: auto;
+                }
+            }
+
+            .illustration1{
+                width: 280px;
+            }
+        }
+    }
+    
+    
+}

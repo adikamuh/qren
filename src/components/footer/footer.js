@@ -17,7 +17,7 @@ class Footer extends React.Component{
                     
                     <div className="footer-menu">
                         <ul>
-                            <li className="caption text-bold">QRen</li>
+                            <li className="caption text-bold first-item">QRen</li>
                             <li className="caption"><Link to="/product">Produk & Bisnis</Link></li>
                             <li className="caption"><Link to="/feature">Fitur & Layanan</Link></li>
                             <li className="caption"><Link to="/promo">Promo</Link></li>

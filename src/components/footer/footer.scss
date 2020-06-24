@@ -61,3 +61,35 @@
         }
     }
 }
+
+@media screen and (max-width:425px){
+    .footer-container{
+        .footer-wrapper{
+            display: block;
+
+            ul{
+                padding-left: 0em;
+            }
+
+            .footer-menu, .footer-contact, .footer-other{
+                margin-top: 2rem;
+            }
+
+            .footer-menu{
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .first-item{
+                        width: 100%;
+                    }
+                    li{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .footer-copyright{
+        margin: 0 !important;
+    }
+}
