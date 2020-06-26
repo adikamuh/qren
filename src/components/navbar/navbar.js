@@ -14,7 +14,7 @@ class Navbar extends React.Component{
                     <Link to="/"><img src={navLogo} alt="Logo"></img></Link>
                     <ul className="nav-list">
                         <li className="nav-item caption"><Link to="/product">PRODUK & BISNIS</Link></li>
-                        <li className="nav-item caption"><Link to="">FITUR & LAYANAN</Link></li>
+                        <li className="nav-item caption"><Link to="/featured">FITUR & LAYANAN</Link></li>
                         <li className="nav-item caption"><Link to="">PROMO</Link></li>
                         <li className="nav-item caption"><Link to="">MITRA & PARTNER</Link></li>
                         <li className="nav-item caption"><Link to="">PUSAT BANTUAN</Link></li>

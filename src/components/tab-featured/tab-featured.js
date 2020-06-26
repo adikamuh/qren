@@ -1,20 +1,26 @@
 import React from 'react'
 import './tab-featured.scss'
 import Tab from '../tab/tab'
+import TabContentModal from './tab-content-modal'
 import TabContent from './tab-content'
 
-import appMockup1 from '../../assets/featured/11.png'
-import appMockup2 from '../../assets/featured/12.png'
-import appMockup3 from '../../assets/featured/13.png'
-import appMockup4 from '../../assets/featured/14.png'
-import appMockup5 from '../../assets/featured/15.png'
-import appMockup6 from '../../assets/featured/16.png'
+import {
+    StepTransaksiDatas,AppMockupTransaksi,
+    StepPendapatanDatas,AppMockupPendapatan,
+    StepLoketDatas,AppMockupLoket, AppMockupModal1, StepModalDatas1
+} from '../../data/featured-data'
 
 class TabFeatured extends React.Component{
     constructor(){
         super()
 
         this.state = {
+            AppMockupTransaksi: AppMockupTransaksi,StepTransaksiDatas: StepTransaksiDatas,
+            AppMockupModal1: AppMockupModal1, StepModalDatas1: StepModalDatas1,
+            AppMockupPendapatan: AppMockupPendapatan,StepPendapatanDatas: StepPendapatanDatas,
+            AppMockupLoket: AppMockupLoket,StepLoketDatas: StepLoketDatas,
+
+
             isTransaksiActive: true,
             isModalActive: false,
             isTarikActive: false,
@@ -39,6 +45,7 @@ class TabFeatured extends React.Component{
             isModalActive: false,
             isTarikActive: false,
             isLoketActive: false,
+            activeStep: 1,
         })
     }
 
@@ -48,6 +55,7 @@ class TabFeatured extends React.Component{
             isModalActive: true,
             isTarikActive: false,
             isLoketActive: false,
+            activeStep: 1,
         })
     }
 
@@ -57,6 +65,7 @@ class TabFeatured extends React.Component{
             isModalActive: false,
             isTarikActive: true,
             isLoketActive: false,
+            activeStep: 1,
         })
     }
 
@@ -66,56 +75,41 @@ class TabFeatured extends React.Component{
             isModalActive: false,
             isTarikActive: false,
             isLoketActive: true,
+            activeStep: 1,
         })
     }
 
     
     render(){
-        let AppMockup = [
-            appMockup1,appMockup2,appMockup3,appMockup4,appMockup5,appMockup6
-        ]
+        // console.log(this.state)
 
-        const StepTransaksiDatas = [
-            {
-                key: 1,
-                text: 'Buka aplikasi QRen',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-            {
-                key: 2,
-                text: 'Klik “Transaksi QR” ',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-            {
-                key: 3,
-                text: 'Lalu klik “Input harga”, masukan nominal harga yang harus dibayarkan',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-            {
-                key: 4,
-                text: 'Setelah QR Code muncul, Selanjutnya tunjukan QR Code kepada pembeli  agar dapat dipindai',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-            {
-                key: 5,
-                text: 'Setelah QR Code dipindai, tunggu sampai muncul layar “Bukti Pembayaran” ',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-            {
-                key: 6,
-                text: 'Transaksi sukses!',
-                isActive: this.state.activeStep,
-                onClick: this.handleClickStep,
-            },
-        ]
+        const transaksiComponents = <TabContent 
+                StepDatas={this.state.StepTransaksiDatas} 
+                AppMockup={this.state.AppMockupTransaksi[this.state.activeStep-1]} 
+                activeStep={this.state.activeStep}
+                onClick={this.handleClickStep}
+            />
 
-        const transaksiComponents = <TabContent StepDatas={StepTransaksiDatas} AppMockup={AppMockup} />
+        const pendapatanComponents = <TabContent
+                StepDatas={this.state.StepPendapatanDatas} 
+                AppMockup={this.state.AppMockupPendapatan[this.state.activeStep-1]} 
+                activeStep={this.state.activeStep}
+                onClick={this.handleClickStep}
+            />
 
+        const loketComponents = <TabContent
+                StepDatas={this.state.StepLoketDatas} 
+                AppMockup={this.state.AppMockupLoket[this.state.activeStep-1]} 
+                activeStep={this.state.activeStep}
+                onClick={this.handleClickStep}
+            />
+
+        const modalComponents = <TabContentModal
+                StepDatas={this.state.StepModalDatas1} 
+                AppMockup={this.state.AppMockupModal1[this.state.activeStep-1]} 
+                activeStep={this.state.activeStep}
+                onClick={this.handleClickStep}
+            />
 
         const TabDatas = [
             {
@@ -131,18 +125,24 @@ class TabFeatured extends React.Component{
                 isActive: this.state.isModalActive,
                 handleClick: this.handleClickModal,
                 text: 'ISI MODAL USAHA',
+
+                bodyComponents: modalComponents
             },
             {
                 key: 3,
                 isActive: this.state.isTarikActive,
                 handleClick: this.handleClickTarik,
                 text: 'TARIK PENDAPATAN',
+
+                bodyComponents: pendapatanComponents
             },
             {
                 key: 4,
                 isActive: this.state.isLoketActive,
                 handleClick: this.handleClickLoket,
                 text: 'LOKET BAYAR',
+
+                bodyComponents: loketComponents
             },
         ]
 

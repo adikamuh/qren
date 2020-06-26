@@ -4,25 +4,39 @@
     align-items: flex-start;
     justify-content: flex-start;
     .mockup{
-        width: 500px;
+        width: 40%;
         height: 711px;
         background-repeat: no-repeat;
         background-position: center;
+        overflow: hidden;
+        box-sizing: border-box;
+        // background-size: 150%;
     }
     
     .step-list{
+        position: relative;
+        width: 70%;
         margin-top: 4rem;
-        margin-left: 2rem;
+        padding-left: 1rem;
+        height: auto;
+        overflow: hidden;
+
+        // display: flex;
+        // flex-direction: column;
         .step-item{
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            // overflow-x: hidden;
 
             .number{
+                position: relative;
+                flex: 0 0 40px;
                 width: 40px;
                 height: 40px;
                 background: #ffffff;
                 border-radius: 100%;
+                z-index: 1;
 
                 border: none;
                 outline: none;
@@ -48,7 +62,8 @@
             }
 
             p{
-                width: 80%;
+                // width: 100%;
+                position: relative;
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 28px;
@@ -57,6 +72,56 @@
                 letter-spacing: 0.05em;
                 color: #828282;
             }
+
+            .button-wrapper{
+                float: right;
+                margin-left: 2rem;
+                display: none;
+                // align-items: center;
+                justify-content: flex-start;
+                
+                .btn-outlined{
+                    position: relative;
+                    width: 141px;
+                    height: 44px;
+                    font-family: Ubuntu;
+                    font-size: 16px;
+                    line-height: 22px;
+                    /* identical to box height, or 137% */
+
+                    letter-spacing: 0.03em;
+
+                    /* #333333 */
+
+                    color: #333333;
+                    background: #FFFFFF;
+                    /* #BDBDBD */
+
+                    border: 0.3px solid #BDBDBD;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+                .btn-outlined:focus{
+                    outline: none;
+                }
+
+                .active{
+                    color: #ED1C24;
+                    border-bottom: 4px solid #ED1C24;
+                }
+            }
+
+        }
+
+        .line-vertical{
+            position: absolute;
+            margin-left: 1.2rem;
+            margin-top: 1rem;
+            z-index: 0;
+            width: 2px;
+            overflow: hidden;
+            height: 90%;
+            background: #E0E0E0;
         }
 
         .active{

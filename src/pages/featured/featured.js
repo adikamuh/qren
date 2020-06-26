@@ -12,7 +12,7 @@ function BannerCoverFeatured(props){
                 <img className="illustration-img" src={props.illustration} alt=""></img>
                 <div className="content">
                     <h1 className="text-bold">{props.title}</h1>
-                    <Link className="button btn-pasive"><img src={iconPlay} alt="Click to play video"></img>PLAY VIDEO</Link>
+                    <Link to="" className="button btn-pasive"><img src={iconPlay} alt="Click to play video"></img>PLAY VIDEO</Link>
                 </div>
                 
             </div>

@@ -3,12 +3,16 @@ import './tab-content.scss'
 
 function StepItem(props){
     return(
-        <div className={props.isActive === props.id ? 'step-item active' : 'step-item'} >
-            
+        <div className={props.isActive === props.id ? 'step-item active' : 'step-item'}>
             <button className="number" onClick={() => props.onClick(props.id)}>
                 <h5 className="text-bold">{props.id}</h5>
             </button>
             <p className="body1">{props.text}</p>
+            <div className="button-wrapper" style={{display: props.id === 3 && 'flex'}}>
+                <button className="btn-outlined active">Pendapatan</button>
+                <button className="btn-outlined">Finpay</button>
+                <button className="btn-outlined">Virtual Account</button>
+            </div>
         </div>
     )
 }
@@ -33,7 +37,7 @@ function StepLists(props){
     )
 }
 
-class TabContent extends React.Component{
+class TabContentModal extends React.Component{
     // constructor(props){
     //     super(props)
     // }
@@ -49,4 +53,4 @@ class TabContent extends React.Component{
     }
 }
 
-export default TabContent
+export default TabContentModal
