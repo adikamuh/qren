@@ -4,6 +4,7 @@ import './navbar.scss'
 
 import navLogo from '../../assets/logo.png'
 import iconProfile from '../../assets/ic_profile.png'
+import menuBars from '../../assets/Open.png'
 
 class Navbar extends React.Component{
     render(){
@@ -24,6 +25,7 @@ class Navbar extends React.Component{
                         </div>
                         <button className="btn-primary button text-uppercase">DOWNLOAD</button>
                     </div>
+                    <button className="menu-mobile"><img src={menuBars} alt=""></img></button>
                 </nav>
             </div>
         )

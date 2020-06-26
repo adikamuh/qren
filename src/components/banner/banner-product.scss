@@ -44,3 +44,60 @@
         }
     }
 }
+
+.banner-product-mobile{
+    display: none;
+}
+
+@media screen and (max-width:425px){
+    .banner-product-bg{
+        display: none;
+    }
+
+    .banner-product-mobile{
+        display: block;
+        background: #ED1C24;
+        box-shadow: 4.11642px 6.86071px 13.7214px rgba(67, 0, 0, 0.15);
+        border-radius: 13.7214px;
+        box-sizing: border-box;
+        .banner-product-wrapper{
+            height: inherit;
+            .banner-title{
+                padding: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                align-content: flex-end;
+                box-sizing: border-box;
+                height: 70%;
+                h5{
+                    margin: 0;
+                    line-height: 23px;
+                    letter-spacing: 0.01em;
+
+                    /* white */
+
+                    color: #FFFFFF;
+                }
+            }
+            .banner-caption{
+                padding: 0 1rem;
+                padding-top: 0.5rem;
+                height: 30%;
+
+                background: white;
+                border-radius: 0 0 13px 13px;
+                p{
+                    line-height: 14px;
+                    /* or 140% */
+
+                    letter-spacing: 0.01em;
+
+                    /* #333333 */
+
+                    color: #333333;
+                }
+            }
+        }
+    }
+}

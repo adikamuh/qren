@@ -13,3 +13,17 @@
 .tab-content{
     display: none;
 }
+
+@media screen and (max-width: 425px){
+    .tab-title{
+        .title-tab{
+            font-size: 20px;
+            line-height: 23px !important;
+            letter-spacing: 0.01em !important;
+            color: #333333 !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+    }
+}

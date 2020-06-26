@@ -15,6 +15,7 @@ import phone from '../../assets/product/phone-1.png'
 import bgLoket from '../../assets/product/bg-loket.png'
 import './banner-perangkat.scss'
 import './banner-loket.scss'
+import TabMobile from '../tab/tab-mobile'
 
 class BannerPerangkat extends React.Component{
     render(){
@@ -27,6 +28,7 @@ class BannerPerangkat extends React.Component{
                         <h3 className="text-bold" style={{letterSpacing: '0.005em'}}>{this.props.title}</h3>
                     </div>
                     <div className="header-subtitle" style={{backgroundImage: 'url('+bg+')'}}>
+                        <h3 className="text-bold mobile" style={{letterSpacing: '0.005em'}}>{this.props.title}</h3>
                         <p className="body2">{this.props.subtitle}</p>
                     </div>
 
@@ -149,6 +151,16 @@ class TabProduct extends React.Component{
                 styleBody: {
                     height: '456px',
                     width: '279px'
+                },
+                styleBodyMobile: {
+                    height: '313px',
+                    width: '194px',
+                },
+                styleImgMobile: {
+                    position: 'absolute',
+                    width: '94px',
+                    marginTop: '-50px',
+                    marginLeft: '30px'
                 }
             },
             {
@@ -164,6 +176,16 @@ class TabProduct extends React.Component{
                 styleBody: {
                     height: '456px',
                     width: '279px'
+                },
+                styleBodyMobile: {
+                    height: '313px',
+                    width: '194px',
+                },
+                styleImgMobile: {
+                    position: 'absolute',
+                    width: '94px',
+                    marginTop: '-50px',
+                    marginLeft: '30px'
                 }
             }
         ]
@@ -183,6 +205,15 @@ class TabProduct extends React.Component{
                 styleBody: {
                     height: '445px',
                     width: '503px'
+                },
+                styleBodyMobile: {
+                    height: '274px',
+                    width: '265px'
+                },
+                styleImgMobile: {
+                    width: '119px',
+                    marginLeft: '50px',
+                    marginBottom: '10px'
                 }
             }
         ]
@@ -336,7 +367,12 @@ class TabProduct extends React.Component{
 
         return(
             <div>
-                <Tab btnDatas={TabDatas} title={this.state.title} caption={this.state.caption}/>
+                <div className="tab-product-desktop">
+                    <Tab btnDatas={TabDatas} title={this.state.title} caption={this.state.caption}/>
+                </div>
+                <div className="tab-product-mobile">
+                    <TabMobile title={this.state.title} caption={this.state.caption} TabDatas={TabDatas} />
+                </div>
             </div>
         )
     }

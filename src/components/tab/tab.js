@@ -78,14 +78,16 @@ class Tab extends React.Component{
             <div className="container" style={styleContainer}>
 
                 <div className="tab-title" style={{margin: '5rem 8%'}}>
-                    <h2 className="text-bold" style={styleTitle}>{this.props.title}</h2>
+                    <h2 className="text-bold title-tab" style={styleTitle}>{this.props.title}</h2>
                     <p className="body1" style={styleCaption}>{this.props.caption}</p>
                 </div>
 
                 <div className="btn-tab-wrapper">
                     {tabButton}
                 </div>
+                <div className="tab-datas">
                     {tabDatas}
+                </div>
             </div>
         )
     }

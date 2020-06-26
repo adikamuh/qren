@@ -1,0 +1,64 @@
+@media screen and (max-width: 425px){
+    .tab-mobile{
+        background: #F2F2F2;
+    }
+    .tab-mobile-wrapper{
+        h5{
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            width: 70%;
+            margin: 0 auto;
+    
+            /* Gray 1 */
+    
+            color: #333333;
+        }
+        p{
+            line-height: 22px;
+            /* or 137% */
+    
+            text-align: center;
+            letter-spacing: 0.03em;
+    
+            /* #333333 */
+    
+            color: #333333;
+        }
+    }
+
+    .tab-mobile-content{
+        .tab-mobile-content-wrapper{
+            padding: 2rem 1rem;
+            .content-title{
+                border-bottom: 5px solid #ED1C24;
+
+                h5{
+                    font-size: 20px;
+                    line-height: 23px;
+                    /* identical to box height */
+
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    margin: 0;
+                    margin-bottom: 1rem;
+
+                    color: #ED1C24;
+                }
+            }
+
+            .body2{
+                font-size: 16px;
+                line-height: 22px;
+                /* or 137% */
+
+                text-align: center;
+                letter-spacing: 0.03em;
+
+                /* #4F4F4F */
+
+                color: #4F4F4F;
+            }
+        }
+    }
+}

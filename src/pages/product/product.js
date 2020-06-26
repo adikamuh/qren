@@ -7,7 +7,7 @@ class Product extends React.Component{
     render(){
         return(
             <div className='top'>
-                <div className="container" style={{padding: '2rem 13rem'}}>
+                <div className="container">
                     <h1 className="text-bold top-title">QRen hadir untuk memudahkan proses pembayaran, serta meningkatkan potensi bisnis Anda.</h1>
                 </div>
                 <BannerLong />

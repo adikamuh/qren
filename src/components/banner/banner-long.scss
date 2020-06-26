@@ -17,7 +17,7 @@
 
 
     .content{
-        width: 55%;
+        width: 45%;
         p{
             line-height: 24px;
             /* or 150% */
@@ -28,5 +28,43 @@
     
             color: #FFFFFF;
         }
-    } 
+    }
+}
+.content-mobile{
+    display: none;
+}
+
+@media screen and (max-width:425px){
+    .banner-long-wrapper{
+        height: 107px;
+        border-radius: 15px;
+
+        .illustration-img{
+            position: absolute;
+            margin-top: 1rem;
+            margin-left: -0.8rem;
+            width: 133px;
+        }
+        .phone-img{
+            width: 187px;
+            margin-left: 3rem;
+        }
+        .content{display: none;}
+    }
+
+    .content-mobile{
+        display: block;
+        margin-top: 3rem;
+        p{
+            line-height: 22px;
+            /* or 137% */
+
+            letter-spacing: 0.03em;
+
+            /* #333333 */
+
+            color: #333333;
+
+        }
+    }
 }
