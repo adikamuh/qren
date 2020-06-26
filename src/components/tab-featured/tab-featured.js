@@ -7,7 +7,10 @@ import TabContent from './tab-content'
 import {
     StepTransaksiDatas,AppMockupTransaksi,
     StepPendapatanDatas,AppMockupPendapatan,
-    StepLoketDatas,AppMockupLoket, AppMockupModal1, StepModalDatas1
+    StepLoketDatas,AppMockupLoket,
+    AppMockupModal1, StepModalDatas1,
+    AppMockupModal2, StepModalDatas2,
+    AppMockupModal3, StepModalDatas3,
 } from '../../data/featured-data'
 
 class TabFeatured extends React.Component{
@@ -16,7 +19,10 @@ class TabFeatured extends React.Component{
 
         this.state = {
             AppMockupTransaksi: AppMockupTransaksi,StepTransaksiDatas: StepTransaksiDatas,
+            AppMockupModal: AppMockupModal1, StepModalDatas: StepModalDatas1,
             AppMockupModal1: AppMockupModal1, StepModalDatas1: StepModalDatas1,
+            AppMockupModal2: AppMockupModal2, StepModalDatas2: StepModalDatas2,
+            AppMockupModal3: AppMockupModal3, StepModalDatas3: StepModalDatas3,
             AppMockupPendapatan: AppMockupPendapatan,StepPendapatanDatas: StepPendapatanDatas,
             AppMockupLoket: AppMockupLoket,StepLoketDatas: StepLoketDatas,
 
@@ -26,6 +32,7 @@ class TabFeatured extends React.Component{
             isTarikActive: false,
             isLoketActive: false,
             activeStep: 1,
+            activeMethod: 'pendapatan',
         }
 
         this.handleClickTransaksi = this.handleClickTransaksi.bind(this)
@@ -33,6 +40,52 @@ class TabFeatured extends React.Component{
         this.handleClickModal = this.handleClickModal.bind(this)
         this.handleClickLoket = this.handleClickLoket.bind(this)
         this.handleClickStep = this.handleClickStep.bind(this)
+        this.handleClickMethod = this.handleClickMethod.bind(this)
+    }
+    
+    
+    handleClickMethod(param){
+        this.setState(
+            prevState => {
+                if(param === 'pendapatan'){
+                    return{
+                        activeMethod: param,
+                        AppMockupModal: prevState.AppMockupModal1,
+                        StepModalDatas: prevState.StepModalDatas1,
+                    }
+                }else if(param === 'finpay'){
+                    if(prevState.activeStep > 5){
+                        return{
+                            activeMethod: param,
+                            AppMockupModal: prevState.AppMockupModal2,
+                            StepModalDatas: prevState.StepModalDatas2,
+                            activeStep: 5,
+                        }
+                    }else{
+                        return{
+                            activeMethod: param,
+                            AppMockupModal: prevState.AppMockupModal2,
+                            StepModalDatas: prevState.StepModalDatas2,
+                        }
+                    }
+                }else if(param === 'va'){
+                    if(prevState.activeStep > 5){
+                        return{
+                            activeMethod: param,
+                            AppMockupModal: prevState.AppMockupModal3,
+                            StepModalDatas: prevState.StepModalDatas3,
+                            activeStep: 5,
+                        }
+                    }else{
+                        return{
+                            activeMethod: param,
+                            AppMockupModal: prevState.AppMockupModal3,
+                            StepModalDatas: prevState.StepModalDatas3,
+                        }
+                    }
+                }
+            }
+        )
     }
 
     handleClickStep(id){
@@ -82,6 +135,7 @@ class TabFeatured extends React.Component{
     
     render(){
         // console.log(this.state)
+        console.log(this.state.activeMethod)
 
         const transaksiComponents = <TabContent 
                 StepDatas={this.state.StepTransaksiDatas} 
@@ -105,10 +159,12 @@ class TabFeatured extends React.Component{
             />
 
         const modalComponents = <TabContentModal
-                StepDatas={this.state.StepModalDatas1} 
-                AppMockup={this.state.AppMockupModal1[this.state.activeStep-1]} 
+                StepDatas={this.state.StepModalDatas} 
+                AppMockup={this.state.AppMockupModal[this.state.activeStep-1]} 
                 activeStep={this.state.activeStep}
+                activeMethod={this.state.activeMethod}
                 onClick={this.handleClickStep}
+                onClickMethod={this.handleClickMethod}
             />
 
         const TabDatas = [
