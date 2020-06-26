@@ -4,7 +4,7 @@ import './tab-mobile.scss'
 class TabMobileContent extends React.Component{
     render(){
         let styleContainer = {
-            background: (this.props.id%2) == 0 ? '#f2f2f2' : '#ffffff'
+            background: (this.props.id%2) === 0 ? '#f2f2f2' : '#ffffff'
         }
 
         return(

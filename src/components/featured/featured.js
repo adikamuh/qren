@@ -3,9 +3,9 @@ import './featured.scss'
 import Banner from '../banner/banner'
 
 import whiteArrow from '../../assets/right-arrow-white.png'
-import BannerFeatured from '../banner/banner-featured'
+// import BannerFeatured from '../banner/banner-featured'
 
-import ticket from '../../assets/ticket.png'
+// import ticket from '../../assets/ticket.png'
 import Carousel from '../carousel/carousel'
 
 class Featured extends React.Component{
@@ -36,12 +36,12 @@ class Featured extends React.Component{
             },
         ]
 
-        const bannerFeaturedDatas={
-            key: 1, 
-            title: "Tiket",
-            text: "Solusi teknologi pembayaran yang diciptakan khusus untuk proses pembelian tiket penyebrangan laut di Bangsal, Lombok Utara",
-            bgLeft: ticket
-        }
+        // const bannerFeaturedDatas={
+        //     key: 1, 
+        //     title: "Tiket",
+        //     text: "Solusi teknologi pembayaran yang diciptakan khusus untuk proses pembelian tiket penyebrangan laut di Bangsal, Lombok Utara",
+        //     bgLeft: ticket
+        // }
 
         const bannerComponents = bannerDatas.map(
             banner => <Banner key={banner.key} {...banner} />

@@ -19,7 +19,7 @@ class TabContent extends React.Component{
         }
 
         return(
-            <div>
+            <div className={this.props.isActive ? 'tab-content-actve' : 'tab-content'}>
                 <div className="body-text" style={{margin: '0 15%'}}>
                     <p className="body1" style={styleP}>{this.props.bodyText}</p>
                 </div>
@@ -32,9 +32,7 @@ class TabContent extends React.Component{
 }
 
 class Tab extends React.Component{
-    constructor(){
-        super()
-    }
+
     
     render(){
         // console.log(this.props)
@@ -46,9 +44,7 @@ class Tab extends React.Component{
 
         const tabDatas = button.map(
             body => (
-                <div className={body.isActive ? 'tab-content-actve' : 'tab-content'}>
-                    <TabContent bodyText = {body.bodyText} bodyComponents = {body.bodyComponents} />
-                </div>
+                    <TabContent key={body.key} isActive={body.isActive} bodyText = {body.bodyText} bodyComponents = {body.bodyComponents} />
             )
         )
 
