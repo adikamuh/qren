@@ -1,0 +1,188 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .login-bg{
+        width: 590px;
+        height: 548px;
+        margin-right: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        padding-left: 1rem;
+        h4{
+            margin-top: 3rem;
+            margin-left: 2rem;
+            font-size: 24px;
+        }
+    }
+
+    .login-form{
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 5rem 3rem;
+
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h3{
+            font-size: 28px;
+            line-height: 35px;
+            /* identical to box height, or 125% */
+
+            letter-spacing: 0.005em;
+            margin: 0;
+
+            /* #ED1C24 */
+
+            color: #ED1C24;
+        }
+
+        .sub2{
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height, or 137% */
+
+            letter-spacing: 0.05em;
+
+            /* #333333 */
+
+            color: #333333;
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .form-group{
+                display: flex;
+                // width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0.5rem 0;
+            }
+
+            input[type=text],input[type=number],input[type=password]{
+                width: 364px;
+                height: 72px;
+                border: 2px solid #E8E8E8;
+                box-sizing: border-box;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                font-family: Ubuntu;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            input:focus{
+                outline: none;
+            }
+
+            ::placeholder{
+                font-family: Ubuntu;
+                font-size: 20px;
+                line-height: 30px;
+                /* identical to box height, or 150% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.05em;
+
+                /* BLACK60 */
+
+                color: #A0A4A8;
+            }
+
+            .body2{
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 150% */
+
+                letter-spacing: 0.01em;
+                font-weight: bold;
+
+                color: #ED1C24;
+
+            }
+
+            .form-group-check{
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                width: 364px;
+                height: 72px;
+                border: 2px solid #E8E8E8;
+                box-sizing: border-box;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+
+                h5{
+                    font-size: 20px;
+                    line-height: 30px;
+                    /* identical to box height, or 150% */
+
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.05em;
+
+                    /* #BDBDBD */
+
+                    color: #BDBDBD;
+                }
+            }
+
+            input[type=checkbox]{
+                background: #FFFFFF;
+                width: 20px;
+                height: 20px;
+                /* Grey-50 */
+                
+                border: 5px solid #BDBDBD;
+                box-sizing: border-box;
+                border-radius: 2px;
+            }
+
+            .caption{
+                font-size: 12px;
+                line-height: 18px;
+                margin-right: 1rem;
+                /* or 150% */
+
+                text-align: center;
+                letter-spacing: 0.01em;
+
+                /* Gray 1 */
+
+                color: #333333;
+            }
+            a{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+                /* identical to box height */
+
+                text-align: center;
+                letter-spacing: 0.1em;
+
+                /* Red */
+
+                color: #EB5757;
+            }
+
+            .btn-primary{
+                padding: 1rem 3rem;
+                margin-top: 2rem;
+                margin-bottom: 3.5rem;
+            }
+        }
+    }
+
+}

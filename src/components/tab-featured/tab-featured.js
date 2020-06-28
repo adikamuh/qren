@@ -20,9 +20,9 @@ class TabFeatured extends React.Component{
         this.state = {
             AppMockupTransaksi: AppMockupTransaksi,StepTransaksiDatas: StepTransaksiDatas,
             AppMockupModal: AppMockupModal1, StepModalDatas: StepModalDatas1,
-            AppMockupModal1: AppMockupModal1, StepModalDatas1: StepModalDatas1,
-            AppMockupModal2: AppMockupModal2, StepModalDatas2: StepModalDatas2,
-            AppMockupModal3: AppMockupModal3, StepModalDatas3: StepModalDatas3,
+            // AppMockupModal1: AppMockupModal1, StepModalDatas1: StepModalDatas1,
+            // AppMockupModal2: AppMockupModal2, StepModalDatas2: StepModalDatas2,
+            // AppMockupModal3: AppMockupModal3, StepModalDatas3: StepModalDatas3,
             AppMockupPendapatan: AppMockupPendapatan,StepPendapatanDatas: StepPendapatanDatas,
             AppMockupLoket: AppMockupLoket,StepLoketDatas: StepLoketDatas,
 
@@ -50,38 +50,22 @@ class TabFeatured extends React.Component{
                 if(param === 'pendapatan'){
                     return{
                         activeMethod: param,
-                        AppMockupModal: prevState.AppMockupModal1,
-                        StepModalDatas: prevState.StepModalDatas1,
+                        AppMockupModal: AppMockupModal1,
+                        StepModalDatas: StepModalDatas1,
                     }
                 }else if(param === 'finpay'){
-                    if(prevState.activeStep > 5){
-                        return{
-                            activeMethod: param,
-                            AppMockupModal: prevState.AppMockupModal2,
-                            StepModalDatas: prevState.StepModalDatas2,
-                            activeStep: 5,
-                        }
-                    }else{
-                        return{
-                            activeMethod: param,
-                            AppMockupModal: prevState.AppMockupModal2,
-                            StepModalDatas: prevState.StepModalDatas2,
-                        }
+                    return{
+                        activeMethod: param,
+                        AppMockupModal: AppMockupModal2,
+                        StepModalDatas: StepModalDatas2,
+                        activeStep: 3,
                     }
                 }else if(param === 'va'){
-                    if(prevState.activeStep > 5){
-                        return{
-                            activeMethod: param,
-                            AppMockupModal: prevState.AppMockupModal3,
-                            StepModalDatas: prevState.StepModalDatas3,
-                            activeStep: 5,
-                        }
-                    }else{
-                        return{
-                            activeMethod: param,
-                            AppMockupModal: prevState.AppMockupModal3,
-                            StepModalDatas: prevState.StepModalDatas3,
-                        }
+                    return{
+                        activeMethod: param,
+                        AppMockupModal: AppMockupModal3,
+                        StepModalDatas: StepModalDatas3,
+                        activeStep: 3,
                     }
                 }
             }
