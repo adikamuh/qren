@@ -52,6 +52,7 @@ body{
   box-sizing: border-box;
   border-radius: 6px;
   background: none;
+  cursor: pointer;
 }
 .btn-pasive:hover{
   background: #ED1C24;
@@ -64,7 +65,7 @@ body{
 
 
 .arrow{
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   
   display: flex;
   align-items: center;

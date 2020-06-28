@@ -1,19 +1,25 @@
+.form-group{
+    display: flex;
+    // width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    .eye{
+        position: relative;
+        margin-left: -3rem;
+        cursor: pointer;
+    }
+}
 form{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 3rem 0;
 
-    .form-group{
-        display: flex;
-        // width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1rem 0;
-    }
 
     input[type=text],input[type=number],input[type=password]{
-        width: 364px;
+        width: 462px;
         height: 72px;
         border: 2px solid #E8E8E8;
         box-sizing: border-box;
@@ -55,15 +61,161 @@ form{
 
 }
 
-.form-otp{
+.step2, .step3{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 
-    .otp{
-        width: 46px;
-        border: none;
-        border-bottom: 1px;
+    .body2{
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        letter-spacing: 0.0025em;
+
+        /* Grey / Grey */
+
+        color: #616161;
+    }
+
+    a{
+        line-height: 16px;
+        letter-spacing: normal;
+
+        color: #ED1C24;
+        cursor: pointer;
+    }
+
+    .form-group{
+        // margin-top: 4rem;
+    }
+
+    .btn-pasive{
+        padding: 1rem 3rem;
+        margin: 0 1rem;
+        img{
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.step4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .link-box{
+        margin: 1rem 0;
+        padding-left: 4rem;
+        padding-right: 1.5rem;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        width: 458px;
+        height: 78px;
+        /* shadow soft */
+
+        box-shadow: 0px 4px 20px rgba(67, 0, 0, 0.15);
+        border-radius: 10px;
+        color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.check-form{
+    width: 450px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    input[type=checkbox] {
+        margin-top: 6px;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    .styled-checkbox:checked{
+        background-color: #ED1C24;
+    }
+
+    label{
+        margin: 0;
+        text-align: left;
+        line-height: 25px;
+        /* or 139% */
+
+        letter-spacing: 0.05em;
+
+        color: #4F4F4F;
+        a{
+            font-style: italic;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            /* or 139% */
+
+            letter-spacing: 0.05em;
+            text-decoration-line: underline;
+
+            color: #ED1C24;
+        }
+
+    }
+}
+.step4-perseorangan{
+    .btn-pasive{
+        padding: 1rem 3rem;
+        margin: 0 1rem;
+        img{
+            margin-right: 0.5rem;
+        }
+    }
+
+    .information{
+        margin: 2rem 0;
+        padding: 2.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 502px;
+        // height: 321px;
+
+        /* Yellow */
+
+        background: #Fbefc9;
+        // opacity: 0.3;
+        border-radius: 5px;
+        .information-content{
+            margin-left: 1rem;
+            p{
+                margin: 0;
+                text-align: left;
+                font-size: 18px;
+                line-height: 25px;
+                /* or 139% */
+
+                letter-spacing: 0.05em;
+
+                color: #4F4F4F;
+            }
+            ul{
+                list-style-type: "- ";
+                text-align: left;
+                font-size: 18px;
+                line-height: 25px;
+                /* or 139% */
+
+                letter-spacing: 0.05em;
+
+                color: #4F4F4F;
+
+                margin: 0.5rem auto;
+            }
+        }
     }
 }

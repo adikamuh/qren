@@ -1,0 +1,24 @@
+.otpInput{
+    border: none;
+    margin: 4rem 0.5rem;
+    // margin-bottom: 2rem;
+    width: 46px;
+    height: 48px;
+    border-bottom: 1px  solid  black;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+
+    /* Black / 100% */
+
+    color: #000000;
+}
+
+.otpInput:focus{
+    outline: none;
+}

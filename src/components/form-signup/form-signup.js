@@ -26,7 +26,16 @@ class FormSignup extends React.Component{
             step2: false,
             step3: false,
             step4: false,
+
+            isStep1Complete: false,
+            isStep2Complete: false,
+            isStep3Complete: false,
+            isStep4Complete: false,
         }
+    }
+
+    handleClickLanjut(){
+        this.setState({})
     }
     
     render(){
