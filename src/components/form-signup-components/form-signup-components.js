@@ -11,7 +11,7 @@ import leftArrow from '../../assets/left-arrow-red.png'
 import eye from '../../assets/Inactive.png'
 import dropdown from '../../assets/dropdown.png'
 import information from '../../assets/information.png'
-import OTPInputForm from './otpinput.tsx'
+// import OTPInputForm from './otpinput.tsx'
 
 function Step1Components(props){
     return(
@@ -55,7 +55,7 @@ function Step2Components(props){
         <div className="step2">
             <p className="body1">Masukkan 6 digit kode OTP yang telah terkirim melalui SMS ke nomor handphone yang Anda daftarkan</p>
 
-            <OTPInputForm />
+            {/* <OTPInputForm /> */}
 
             <p className="body2">OTP berlaku hingga 0:{counter}</p>
             <a
