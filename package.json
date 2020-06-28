@@ -18,7 +18,8 @@
     "react-scripts": "3.4.1",
     "react-slick": "^0.26.1",
     "serve": "^11.3.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "typescript": "^3.9.5"
   },
   "scripts": {
     "dev": "react-scripts start",
