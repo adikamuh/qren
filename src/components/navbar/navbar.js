@@ -21,7 +21,7 @@ class Navbar extends React.Component{
                     </ul>
                     <div className="nav-right">
                         <div>
-                            <Link className="login" to=""><img src={iconProfile} alt=""></img>LOGIN</Link>
+                            <Link className="login" to="/login"><img src={iconProfile} alt=""></img>LOGIN</Link>
                         </div>
                         <button className="btn-primary button text-uppercase">DOWNLOAD</button>
                     </div>

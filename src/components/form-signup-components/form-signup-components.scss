@@ -12,6 +12,18 @@
     }
 }
 form{
+    .body1{
+        font-size: 18px;
+        line-height: 25px;
+        /* or 139% */
+    
+        text-align: center;
+        letter-spacing: 0.05em;
+    
+        color: #4F4F4F;
+    
+    }
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -49,17 +61,7 @@ form{
     }
 }
 
-.body1{
-    font-size: 18px;
-    line-height: 25px;
-    /* or 139% */
 
-    text-align: center;
-    letter-spacing: 0.05em;
-
-    color: #4F4F4F;
-
-}
 
 .step2, .step3{
     display: flex;

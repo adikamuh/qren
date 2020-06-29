@@ -1,7 +1,7 @@
 import React from 'react'
 import './form-signup-components.scss'
 import { Link } from 'react-router-dom'
-// import OtpInput from "react-otp-input";
+import OtpInput from "react-otp-input";
 // import OTPInput from 'otp-input-react'
 
 
@@ -56,6 +56,12 @@ function Step2Components(props){
             <p className="body1">Masukkan 6 digit kode OTP yang telah terkirim melalui SMS ke nomor handphone yang Anda daftarkan</p>
 
             {/* <OTPInputForm /> */}
+
+            <OtpInput
+                onChange={otp => console.log(otp)}
+                numInputs={6}
+                separator={<span>-</span>}
+            />
 
             <p className="body2">OTP berlaku hingga 0:{counter}</p>
             <a
