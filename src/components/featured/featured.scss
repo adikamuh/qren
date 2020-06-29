@@ -5,6 +5,10 @@
         box-sizing: border-box;
         padding: 5rem 0;
 
+        .__mobile__featured-banner,.__mobile__carousel{
+            display: none;
+        }
+
         .featured-banner{
             display: flex;
             justify-content: space-between;
@@ -21,6 +25,7 @@
             box-sizing: border-box;
             .details-left{
                 margin-right: 1.5rem;
+                width: 40%;
             }
             .details-right{
                 width: 630px;
@@ -48,12 +53,17 @@
         .featured-wrapper{
             padding: 2rem 0;
 
+            .__mobile__featured-banner,.__mobile__carousel{
+                display: block;
+            }
+
             .featured-banner{
                 display: none;
             }
 
             .featured-details{
                 .details-left{
+                    width: 100%;
                     margin: 0;
                     h3{
                         font-size: 16px;
@@ -67,7 +77,7 @@
                         color: #333333 !important;
                         margin-bottom: 0.5rem;
                     }
-                    p{
+                    .body1{
                         margin: 0;
                         font-size: 16px;
                         line-height: 22px;
@@ -89,6 +99,10 @@
                         line-height: 16px;
                         letter-spacing: 0.1em;
 
+                    }
+
+                    .__mobile__carousel{
+                        margin: 2rem 0;
                     }
                 }
 

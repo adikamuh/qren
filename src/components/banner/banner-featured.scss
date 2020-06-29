@@ -18,7 +18,7 @@
         width: 60%;
         height: 100%;
         box-sizing: border-box;
-        background-color: #ED1C24;
+        background-color: #4f4f4f;
         background-repeat: no-repeat;
         background-position: bottom center;
         background-size: cover;
@@ -76,4 +76,58 @@
 
 .slide-custom{
     padding: 0 1rem;
+}
+
+@media screen and (max-width:425px){
+    .banner-featured-container{
+        width: 264px;
+        height: 131px;
+        border-radius: 9px;
+        margin-right: 0.5rem;
+
+        .section-left{
+            border-radius: 9px 0px 0px 9px;
+        }
+
+        .float-object{
+            width: 35px;
+            height: 35px;
+            margin-top: -2rem;
+            margin-left: 5.3rem;
+            box-shadow: 0px 1.45946px 7.2973px rgba(67, 0, 0, 0.15);
+            border-radius: 7.2973px;
+
+            img{
+                width: 33px;
+            }
+        }
+
+        .section-right{
+            border-radius: 0px 9px 9px 0px;
+            padding: 1rem;
+            padding-left: 1.5rem;
+            h5{
+                font-size: 8.75676px;
+                line-height: 12px;
+                /* or 133% */
+
+                letter-spacing: 0.05em;
+
+                /* white */
+
+                color: #FFFFFF;
+            }
+            p{
+                font-size: 6.56757px;
+                line-height: 9px;
+                /* or 139% */
+
+                letter-spacing: 0.05em;
+
+                /* white */
+
+                color: #FFFFFF;
+            }
+        }
+    }
 }

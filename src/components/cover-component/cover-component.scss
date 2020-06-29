@@ -20,6 +20,20 @@
     }
 }
 
+.__carousel{
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.__slider2{
+    width: 100%;
+    margin: 0;
+}
+.__slider2_mobile{
+    display: none !important;
+}
+
+
 @media screen and (max-width: 425px){
     .cover .cover-wrapper .cover-button .button{
         padding: 0 1rem;
@@ -46,6 +60,20 @@
             }
         }
     }
-    
-    
+
+    .__slider_arrows{
+        margin-top: 7.5em !important;
+        padding: 0 1rem !important;
+        img{
+            width: 4.8px;
+        }
+    }
+
+    .__slider2{display: none !important;}
+    .__slider2_mobile{
+        display: inline-block;
+        width: 100vw;
+    }
+
 }
+

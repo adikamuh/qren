@@ -5,24 +5,38 @@ import './carousel-custom.scss'
 
 import Slider from 'react-slick'
 import BannerFeatured from '../banner/banner-featured'
-import ticket from '../../assets/ticket.png'
-import vending from '../../assets/vending.png'
-import parkir from '../../assets/parkir.png'
-import pasar from '../../assets/pasar.png'
-import pembayaran from '../../assets/pembayaran].png'
-import ecommerce from '../../assets/ecommerce.png'
+
 
 import rightArrow from '../../assets/right-arrow-carousel.png'
 import leftArrow from '../../assets/left-arrow-carousel.png'
-import dotsActive from '../../assets/Union.png'
-
 
 class Carousel extends React.Component{
     constructor(props) {
         super(props);
 
+        this.state = {
+            currentSlide: 0,
+            leftArrowCondition: false,
+        }
+
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.updateCurrentSlide = this.updateCurrentSlide.bind(this)
+        this.updateLeftArrow = this.updateLeftArrow.bind(this)
+    }
+
+    updateLeftArrow(){ 
+        console.log(this.state.leftArrowCondition)
+        this.setState(prevState => {
+            return{
+                leftArrowCondition: !prevState.leftArrowCondition
+            }
+        })
+    }
+
+    updateCurrentSlide = current => {
+        console.log(current)
+        this.setState({currentSlide: current})
     }
 
     next() {
@@ -35,44 +49,7 @@ class Carousel extends React.Component{
     
 
     render(){
-        const BannerFeaturedDatas=[
-            {
-                key: 1, 
-                title: "Tiket",
-                text: "Solusi teknologi pembayaran yang diciptakan khusus untuk proses pembelian tiket penyebrangan laut di Bangsal, Lombok Utara",
-                bgLeft: ticket
-            },
-            {
-                key: 2, 
-                title: "Vending Machine",
-                text: "Teknologi pembayaran untuk vending machine yang dibuat dan diintegrasikan secara khusus dengan model bisnis dan perangkat dari brand. Saat ini tersedia di Monas.",
-                bgLeft: vending
-            },
-            {
-                key: 3, 
-                title: "Parkir",
-                text: "Solusi pembayaran tiket parkir gedung atau pada lahan parkir, yang telah terintegrasi dengan Secure Parking yang berada di Telkom Landmark Tower dan jalan di daerah Solo",
-                bgLeft: parkir
-            },
-            {
-                key: 4, 
-                title: "Retribusi Pasar",
-                text: "Solusi pembayaran retribusi pasar yang bekerjasama dengan Pemda Solo dan Bank Jateng ini telah diintegrasikan secara khusus ke sistem backend pasar",
-                bgLeft: pasar
-            },
-            {
-                key: 5, 
-                title: "Pembayaran Tagihan Langganan",
-                text: "Solusi pembayaran tagihan langganan Gas Migas Bontang untuk masyarakat seputar kota Bontang menggunakan QRIS dan aplikasi uang elektronik",
-                bgLeft: pembayaran
-            },
-            {
-                key: 6, 
-                title: "Integrasi Sistem Pembayaran E-commerce",
-                text: "Solusi pembayaran QR yang dapat diintergrasikan langsung ke sistem e-commerce yg telah ada seperti Bonum. Umumnya produk ini digunakan pada aplikasi e-commerce yang saling terhubung dan menjadi hub seperti SAKOO, DigiHotel, dan aplikasi lainnya.",
-                bgLeft: ecommerce
-            },
-        ]
+
 
         const settings = {
             className: "center",
@@ -82,39 +59,12 @@ class Carousel extends React.Component{
             slidesToScroll: 1,
             initialSlide:0,
             infinite: false,
-            // centerMode: true,
-            // centerPadding: '100px',
-            // adaptiveHeight: true,
-            // variableWidth: true,
-            // lazyLoad: true,
-
-            // appendDots: dots => (
-            //     <div 
-            //         style={{
-            //             // marginTop: '2rem'
-            //         }}
-            //     >
-            //         <ul>{dots}</ul>
-            //     </div>
-            // ),
-            // customPaging: i => (
-            //     <div
-            //         style={{
-            //             width: '16px',
-            //             height: '16px',
-            //             backgroundColor: '#c4c4c4',
-            //             borderRadius: '100%',
-            //             marginTop: '2rem'
-            //         }}
-            //         className="custom-dots"
-            //     >
-            //     </div>
-            // )
+            afterChange: this.updateCurrentSlide,
 
             dotsClass: 'button__bar'
         }
 
-        const BannerFeaturedComponents = BannerFeaturedDatas.map(
+        const BannerFeaturedComponents = this.props.BannerFeaturedDatas.map(
             banner => <BannerFeatured key={banner.key} {...banner} />
         )
 
@@ -135,12 +85,14 @@ class Carousel extends React.Component{
                     }}
                 >
                     <img 
+                        className={this.state.currentSlide === 0 ? 'fadeOut' : 'fadeIn'}
                         src={leftArrow} 
                         alt="" 
                         onClick={this.previous}
                         style={{cursor: 'pointer'}}
                     ></img>
                     <img 
+                        className={this.state.currentSlide === 5 ? 'fadeOut' : 'fadeIn'}
                         src={rightArrow} 
                         alt="" 
                         onClick={this.next}

@@ -8,9 +8,10 @@ function Banner(props){
         <div className="banner-container">
             <div className="banner-wrapper">
                 <div className="banner-title">
-                    <h4 className="text-bold">{props.title}</h4>
+                    <h4 className="text-bold">{props.title}{props.plus && <span style={{color: '#FF7A00'}}>+</span>}</h4>
                 </div>
-                <div className="banner-content" style={{backgroundImage: 'url('+bgBanner+')'}}>
+                <div className="banner-separator"></div>
+                <div className="banner-content" style={{}}>
                     <p className="body2">{props.content}</p>
                 </div>
             </div>

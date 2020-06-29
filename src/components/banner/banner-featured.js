@@ -10,7 +10,7 @@ function BannerFeatured(props){
         backgroundImage: 'url('+props.bgLeft+')'
     }
 
-    console.log(bg)
+    // console.log(bg)
     return(
         <div className="banner-featured-container">
             <div className="section-left"

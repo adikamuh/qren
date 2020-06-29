@@ -13,7 +13,7 @@ import SignUp from './pages/signup/signup';
 function App() {
   const DefaultRoutes = withRouter(({ location }) => {
     return(
-      <div>
+      <div style={{boxSizing: 'border-box', width: '100%'}}>
         {
           location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />
         }

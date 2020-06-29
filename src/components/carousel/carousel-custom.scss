@@ -1,33 +1,62 @@
 .button__bar {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 1rem;
-    padding: 0;
-    border-radius: 40px;
-    // width: 70px;
-    text-align: center;
-    height: auto;
-  }
-  
-  .button__bar li {
-    list-style: none;
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 3px;
-    padding: 0;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1rem;
+  padding: 0;
+  border-radius: 40px;
+  // width: 70px;
+  text-align: center;
+  height: auto;
+}
 
-  .button__bar li button {
-    border: none;
-    background: #c4c4c4;
-    color: transparent;
-    cursor: pointer;
-    display: block;
-    height: 15px;
-    width: 15px;
-    border-radius: 7.5px;
-  }
+.button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0;
+}
 
-  .button__bar li.slick-active button {
-    background-color: #ED1C24;
+.button__bar li button {
+  border: none;
+  background: #c4c4c4;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 7.5px;
+}
+
+.button__bar li.slick-active button {
+  background-color: #FF7A00;
+  width: 32px;
+  border-radius: 500px;
+}
+
+.__cover li.slick-active button{
+  background-color: #ED1C24;
+}
+
+.fadeIn{
+  opacity:1;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.fadeOut{
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 425px){
+  .button__bar li button{
+    height: 8px;
+    width: 8px;
   }
+  .button__bar li.slick-active button{
+    width: 16px;
+    border-radius: 100px;
+  }
+}
