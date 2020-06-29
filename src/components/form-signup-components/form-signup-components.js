@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './form-signup-components.scss'
 import { Link } from 'react-router-dom'
 import OtpInput from "react-otp-input";
@@ -14,9 +14,10 @@ import information from '../../assets/information.png'
 // import OTPInputForm from './otpinput.tsx'
 
 function Step1Components(props){
+    console.log(props)
     return(
         <React.Fragment>
-        <form>
+        <form onSubmit={(event) => event.preventDefault()}>
             <div className="form-group">
                 <input type="text" placeholder="Nama Lengkap (Sesuai KTP)" />
             </div>
@@ -34,7 +35,7 @@ function Step1Components(props){
             </div>
 
             <div className="form-group">
-                <button className="button btn-primary arrow">Lanjut<img alt="" src={rightArrow}/></button>
+                <button className="button btn-primary arrow" onClick={() => props.handleClickLanjut(2)}>Lanjut<img alt="" src={rightArrow}/></button>
             </div>
         </form>
         </React.Fragment>
@@ -42,6 +43,7 @@ function Step1Components(props){
 }
 
 function Step2Components(props){
+    // console.log(props)
     const [counter, setCounter] = React.useState(60);
 
     // Second Attempts
@@ -70,14 +72,15 @@ function Step2Components(props){
             >Kirim Ulang</button>
 
             <div className="form-group" style={{marginTop: '4rem'}}>
-                <button className="button btn-pasive"><img src={leftArrow} alt=""/>Kembali</button>
-                <button className="button btn-primary arrow">Lanjut<img src={rightArrow} alt=""></img></button>
+                <button className="button btn-pasive" onClick={() => props.handleClickKembali(1)} ><img src={leftArrow} alt=""/>Kembali</button>
+                <button className="button btn-primary arrow"  onClick={() => props.handleClickLanjut(3)}>Lanjut<img src={rightArrow} alt=""></img></button>
             </div>
         </div>
     )
 }
 
 function Step3Components(props){
+    console.log(props)
     const [paswordShown, setPaswordShown] = React.useState(false);
     const [paswordShownConfirm, setPaswordShownConfirm] = React.useState(false);
 
@@ -92,7 +95,7 @@ function Step3Components(props){
     return(
         <div className="step3">
             <p className="body1">Buat PIN baru untuk dapat masuk ke QRen menggunakan 6 angka</p>
-            <form>
+            <form onSubmit={(event) => event.preventDefault()}>
                 <div className="form-group">
                     <input 
                         placeholder="PIN"
@@ -107,36 +110,50 @@ function Step3Components(props){
                     />
                     <img src={eye} className="eye" alt="" onClick={togglePasswordConfirm} />
                 </div>
-                <div className="form-group">
-                    <button className="button btn-pasive"><img src={leftArrow} alt=""/>Kembali</button>
-                    <button className="button btn-primary arrow">Lanjut<img src={rightArrow} alt=""></img></button>
-                </div>
             </form>
+            <div className="form-group">
+                <button className="button btn-pasive"  onClick={() => props.handleClickKembali(2)}><img src={leftArrow} alt=""/>Kembali</button>
+                <button className="button btn-primary arrow" onClick={() => props.handleClickLanjut(4)}>Lanjut<img src={rightArrow} alt=""></img></button>
+            </div>
         </div>
     )
 }
 
 function Step4Components(props){
+    const [isPerseorangan, setIsPerseorangan] = useState(false);
+    const [isHukum, setIsHukum] = useState(false);
+
+    console.log(props)
     return(
-        <div className="step4">
+        <React.Fragment>
+        <div className="step4" style={{display: isPerseorangan || isHukum ? 'none' : 'flex'}} >
             <p className="body1">Silakan pilih jenis usaha Anda</p>
 
-            <Link className="link-box">
+            <Link className="link-box" onClick={() => setIsPerseorangan(true)}>
                 <i className="button text-uppercase">usaha perseorangan</i>
                 <img src={dropdown} alt=""></img>
             </Link>
-            <Link className="link-box">
+            <Link className="link-box" onClick={() => setIsHukum(true)}>
                 <i className="button text-uppercase">usaha berbadan hukum</i>
                 <img src={dropdown} alt=""></img>
             </Link>
+            <div className="form-group">
+                <button className="button btn-pasive"  onClick={() => props.handleClickKembali(3)}><img src={leftArrow} alt=""/>Kembali</button>
+            </div>
         </div>
+
+        {isPerseorangan && <Step4ComponentsPerseorangan setIsPerseorangan={setIsPerseorangan} />}
+        {isHukum && <Step4ComponentsHukum setIsHukum={setIsHukum} />}
+
+        </React.Fragment>
     )
 }
 
 function Step4ComponentsPerseorangan(props){
+    console.log(props)
     return(
         <div className="step4-perseorangan">
-            <p className="body1">Dengan melengkapi isian dibawah ini,<br/>toko Anda akan mendapatkan kesempatan promosi di aplikasi t-money!</p>
+            <p className="body1" style={{textAlign: 'center'}}>Dengan melengkapi isian dibawah ini,<br/>toko Anda akan mendapatkan kesempatan promosi di aplikasi t-money!</p>
 
             <form>
                 <div className="form-group">
@@ -171,7 +188,7 @@ function Step4ComponentsPerseorangan(props){
                 </div>
 
                 <div className="form-group">
-                    <button className="button btn-pasive" style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
+                    <button className="button btn-pasive" onClick={() => props.setIsPerseorangan(false)} style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
                     <button className="button btn-primary arrow">Daftar<img src={rightArrow} alt=""></img></button>
                 </div>
             </form>
@@ -182,7 +199,7 @@ function Step4ComponentsPerseorangan(props){
 function Step4ComponentsHukum(props){
     return(
         <div className="step4-perseorangan">
-            <p className="body1">Silahkan pilih jenis usaha Anda</p>
+            <p className="body1" style={{textAlign: 'center'}}>Dengan melengkapi isian dibawah ini,<br/>toko Anda akan mendapatkan kesempatan promosi di aplikasi t-money!</p>
 
             <form>
                 <div className="form-group">
@@ -231,7 +248,7 @@ function Step4ComponentsHukum(props){
                 </div>
 
                 <div className="form-group">
-                    <button className="button btn-pasive" style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
+                    <button className="button btn-pasive" onClick={() => props.setIsHukum(false)} style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
                     <button className="button btn-primary arrow">Daftar<img src={rightArrow} alt=""></img></button>
                 </div>
             </form>
@@ -241,14 +258,13 @@ function Step4ComponentsHukum(props){
 
 class FormSignUpComponents extends React.Component{
     render(){
+        console.log(this.props.step[0].isActive)
         return(
             <div>
-                <Step1Components />
-                <Step2Components />
-                <Step3Components />
-                <Step4Components />
-                <Step4ComponentsPerseorangan />
-                <Step4ComponentsHukum />
+                {this.props.step[0].isActive && <Step1Components {...this.props}/>}
+                {this.props.step[1].isActive && <Step2Components {...this.props}/>}
+                {this.props.step[2].isActive && <Step3Components {...this.props}/>}
+                {this.props.step[3].isActive && <Step4Components {...this.props}/>}
             </div>
         )
     }
