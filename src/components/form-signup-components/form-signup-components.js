@@ -60,14 +60,14 @@ function Step2Components(props){
             <OtpInput
                 onChange={otp => console.log(otp)}
                 numInputs={6}
-                separator={<span>-</span>}
+                inputStyle={"otpInput"}
             />
 
             <p className="body2">OTP berlaku hingga 0:{counter}</p>
-            <a
-                className="button text-bold"
+            <button  
+                className="button text-bold onlink"
                 onClick={() => setCounter(60)}
-            >Kirim Ulang</a>
+            >Kirim Ulang</button>
 
             <div className="form-group" style={{marginTop: '4rem'}}>
                 <button className="button btn-pasive"><img src={leftArrow} alt=""/>Kembali</button>
