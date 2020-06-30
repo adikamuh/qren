@@ -9,26 +9,29 @@
             letter-spacing: 0.01em;
             width: 70%;
             margin: 0 auto;
-    
+            
             /* Gray 1 */
-    
+            
             color: #333333;
         }
         p{
             line-height: 22px;
             /* or 137% */
-    
+            
             text-align: center;
             letter-spacing: 0.03em;
-    
+            
             /* #333333 */
-    
+            
             color: #333333;
         }
     }
-
+    
     .tab-mobile-content{
         .tab-mobile-content-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             padding: 2rem 1rem;
             .content-title{
                 border-bottom: 5px solid #ED1C24;
@@ -58,6 +61,19 @@
                 /* #4F4F4F */
 
                 color: #4F4F4F;
+            }
+
+            .__mobile__tab{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 2rem 0;
+            }
+
+            .__mobile__tabCarousel{
+                margin: 2rem 0;
             }
         }
     }

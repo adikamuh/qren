@@ -1,11 +1,25 @@
 import React from 'react'
+import Slider from 'react-slick'
 import './tab-mobile.scss'
 
 class TabMobileContent extends React.Component{
     render(){
         let styleContainer = {
-            background: (this.props.id%2) === 0 ? '#f2f2f2' : '#ffffff'
+            background: (this.props.id%2) === 0 ? '#ffffff' : '#f2f2f2'
         }
+
+        const settings = {
+            className: "slider variable-width",
+            arrows: false,
+            dots: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            infinite: false,
+            adaptiveHeight: true,
+        }
+
+        console.log(this.props)
 
         return(
             <div className="tab-mobile-content" style={styleContainer}>
@@ -16,7 +30,17 @@ class TabMobileContent extends React.Component{
 
                     <p className="body2">{this.props.bodyText}</p>
 
-                    {this.props.bodyComponents}
+                    {this.props.id !==2 ?
+                        <div className="__mobile__tab">
+                            {this.props.bodyComponents}
+                        </div>
+                    :
+                        <div className="__mobile__tabCarousel">
+                            <Slider {...settings}>
+                                {this.props.bodyComponents}
+                            </Slider>
+                        </div>
+                    }
 
                 </div>
             </div>
@@ -34,7 +58,7 @@ class TabMobile extends React.Component{
         )
         return(
             <React.Fragment>
-            <div className="container tab-mobile">
+            <div className="container tab-mobile" style={{marginBottom: '0'}}>
                 <div className="tab-mobile-wrapper">
                     <h5 className="text-bold">{this.props.title}</h5>
                     <p className="body2">{this.props.caption}</p>

@@ -62,6 +62,10 @@
     }
 }
 
+.nav__mobile{
+    display: none;
+}
+
 @media screen and (max-width:425px){
     .nav{
         padding: 0 3%;
@@ -75,5 +79,108 @@
                 padding: 0;
             }
         }
+    }
+
+    .zOut{
+        z-index: -1;
+    }
+
+    .zIn{
+        z-index: 9999;
+    }
+
+    .nav__mobile{
+        display: block;
+        position: fixed;
+        top: 0px;
+        background: #ED1C24;
+        width: 100vw;
+        height: 100vh;
+        .nav__mobile-wrapper{
+            height: inherit;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            // background-size: 0;
+
+            padding: 2.5rem;
+            box-sizing: border-box;
+
+            .__close{
+                margin-left: 90%;
+                button{
+                    border: none;
+                    background: none;
+                }
+                button:focus{
+                    outline: none;
+                }
+            }
+            .__mobile_list{
+                list-style-type: none;
+                padding: 0;
+                li{
+                    margin: 2rem 0;
+                    a{
+                        font-size: 16px;
+                        line-height: 22px;
+                        /* or 137% */
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.03em;
+
+                        /* white */
+
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .login{
+                margin-top: 6rem;
+
+                display: flex;
+                justify-content: flex-start;
+
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.1em;
+
+                /* white */
+
+                color: #FFFFFF;
+
+                img{
+                    margin-right: 0.5rem;
+                }
+
+            }
+
+            .__download{
+                margin-top: 2rem;
+
+                font-size: 14px;
+                line-height: 16px;
+                /* identical to box height */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.1em;
+                text-align: center;
+                text-transform: uppercase;
+
+                /* white */
+
+                color: #FFFFFF;
+
+                border: 1.5px solid #FFFFFF;
+                box-sizing: border-box;
+                border-radius: 6px;
+                width: 158px;
+                height: 48px;
+            }
+        }
+
     }
 }

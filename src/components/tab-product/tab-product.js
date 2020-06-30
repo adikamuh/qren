@@ -20,10 +20,12 @@ import TabMobile from '../tab/tab-mobile'
 class BannerPerangkat extends React.Component{
     render(){
         return(
+            <React.Fragment>
             <div className="banner-perangkat-bg">
                 <div className="banner-perangkat-wrapper">
 
                     <div className="banner-header">
+                        <img className="__mobile__img" src={this.props.img} alt="" />
                         <div className="img" style={this.props.style}></div>
                         <h3 className="text-bold" style={{letterSpacing: '0.005em'}}>{this.props.title}</h3>
                     </div>
@@ -55,6 +57,7 @@ class BannerPerangkat extends React.Component{
 
                 </div>
             </div>
+            </React.Fragment>
         )
     }
 }
@@ -225,6 +228,7 @@ class TabProduct extends React.Component{
                     backgroundImage: 'url('+cashier+')',
                     height: '180px',
                 },
+                img: cashier,
                 
                 title: 'QRen Lite+',
                 subtitle: 'Paket integrasi software API untuk instalasi praktis serta efisien',
@@ -241,6 +245,7 @@ class TabProduct extends React.Component{
                     backgroundImage: 'url('+edc+')',
                     height: '160px',
                 },
+                img: edc,
                 
                 title: 'QRen Go+',
                 subtitle: 'Paket penyewaan perangkat EDC harian dan intergrasi software API',
@@ -257,6 +262,7 @@ class TabProduct extends React.Component{
                     backgroundImage: 'url('+edc+')',
                     height: '160px',
                 },
+                img: edc,
                 
                 title: 'QRen Pro+',
                 subtitle: 'Paket berisi perangkat EDC, software API, dan layanan servis 24/7 untuk kenyamanan operasional Anda',
@@ -273,6 +279,7 @@ class TabProduct extends React.Component{
                     backgroundImage: 'url('+edc2+')',
                     height: '185px',
                 },
+                img: edc2,
                 
                 title: 'QRen Optima+',
                 subtitle: 'Paket berisi perangkat canggih dengan OS Android, software API, dan layanan servis 24/7 untuk kenyamanan operasional Anda',
@@ -289,6 +296,7 @@ class TabProduct extends React.Component{
                     backgroundImage: 'url('+edc2+')',
                     height: '185px',
                 },
+                img: edc2,
                 
                 title: 'QRen Advan+',
                 subtitle: 'Paket khusus dengan perangkat dan software yang dapat disesuaikan dengan model bisnis Anda',
