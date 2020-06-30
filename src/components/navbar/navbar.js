@@ -18,20 +18,20 @@ function NavMobile(props){
             props.isNavOpen ? 'fadeIn zIn' : 'fadeOut zOut'
         ].filter(x => !!x).join(' ')} >
             <div className="nav__mobile-wrapper" style={{backgroundImage: 'url('+bgNavMobile+')'}}>
-                <ul className="__mobile_list">
-                    <li className="body2"><Link to="/">HOME</Link></li>
-                    <li className="body2"><Link to="/product">PRODUK & BISNIS</Link></li>
-                    <li className="body2"><Link to="/featured">FITUR & LAYANAN</Link></li>
-                    <li className="body2"><Link>PROMO</Link></li>
-                    <li className="body2"><Link>MITRA & PARTNER</Link></li>
-                    <li className="body2"><Link>PUSAT BANTUAN</Link></li>
-                </ul>
                 <div className="__close">
                     <button className="button" onClick={props.navClose}><img src={close} alt="" /></button>
                 </div>
+                <ul className="__mobile_list">
+                    <li className="body2" onClick={props.navClose}><Link to="/">HOME</Link></li>
+                    <li className="body2" onClick={props.navClose}><Link to="/product">PRODUK & BISNIS</Link></li>
+                    <li className="body2" onClick={props.navClose}><Link to="/featured">FITUR & LAYANAN</Link></li>
+                    <li className="body2" onClick={props.navClose}><Link>PROMO</Link></li>
+                    <li className="body2" onClick={props.navClose}><Link>MITRA & PARTNER</Link></li>
+                    <li className="body2" onClick={props.navClose}><Link>PUSAT BANTUAN</Link></li>
+                </ul>
 
-                <Link className="login" to="/login"><img src={iconProfileMobile} alt=""></img>LOGIN</Link>
-                <Link className="__download text-bold">DOWNLOAD</Link>
+                <Link className="login" to="/login"  onClick={props.navClose}><img src={iconProfileMobile} alt=""></img>LOGIN</Link>
+                <Link className="__download text-bold"  onClick={props.navClose}>DOWNLOAD</Link>
             </div>
         </div>
     )
@@ -58,6 +58,10 @@ class Navbar extends React.Component{
         // console.log('clicked close')
         this.setState({isNavOpen:false})
     }
+
+    // componentWillUnmount(){
+    //     this.setState({isNavOpen:false})
+    // }
 
     render(){
         // console.log(this.state.isNavOpen)

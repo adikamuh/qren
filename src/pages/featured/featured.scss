@@ -106,4 +106,34 @@
 
         }
     }
+    .banner-long-featured-wrapper{
+        height: 127px;
+        border-radius: 15px;
+        .illustration-img{
+            width: 131px;
+        }
+        .content{
+            width: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            padding: 0;
+            h1{
+                font-size: 12px;
+                width: auto;
+                line-height: 14px;
+                letter-spacing: 0.01em;
+
+                /* white */
+
+                color: #FFFFFF;
+            }
+            .button{
+                width: 144px;
+                height: 40px;
+                padding: 0;
+            }
+        }
+    }
 }

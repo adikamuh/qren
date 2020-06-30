@@ -40,7 +40,7 @@ class TabContent extends React.Component{
 
     render(){
         return(
-            <div className="container">
+            <div className="container __featured__mobile">
                 <div className="content-wrapper">
                     <StepLists StepDatas = {this.props.StepDatas} appMockup={this.props.AppMockup} isActive={this.props.activeStep} onClick={this.props.onClick}/>
                 </div>

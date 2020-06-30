@@ -136,6 +136,69 @@
             }
         }
     }
+}
 
+@media screen and (max-width:425px){
+    .__featured__mobile{
+        margin-top: 0em;
+    }
+    .content-wrapper{
+        .mockup{
+            height: 230px;
+            background-size: 190%;
+        }
 
+        .step-list{
+            margin-top: 0.5rem;
+
+            .line-vertical{
+                margin-left: 0.7rem;
+                height: 85%;
+            }
+
+            .step-item{
+
+                .number{
+                    width: 24px;
+                    height: 24px;
+                    flex: 0 0 24px;
+
+                    margin-right: 1rem;
+                    h5{
+                        font-size: 14px;
+                    }
+                }
+
+                p{
+                    font-size: 10px;
+                    line-height: 14px;
+                    /* or 140% */
+
+                    letter-spacing: 0.01em;
+                }
+
+                .button-wrapper{
+                    margin-left: 0em;
+                    .btn-outlined{
+                        width: 53px;
+                        height: 20px;
+
+                        font-weight: bold;
+                        font-size: 6px;
+                        line-height: 8px;
+                        text-align: center;
+                        letter-spacing: 0.01em;
+
+                        background: none;
+
+                        border: none;
+                        border-bottom: 0.3px solid #BDBDBD;
+                    }
+                    .active{
+                        border-bottom: 2px solid #ED1C24;
+                    }
+                }
+            }
+        }
+    }
 }

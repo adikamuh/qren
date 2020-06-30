@@ -20,9 +20,6 @@ class TabFeatured extends React.Component{
         this.state = {
             AppMockupTransaksi: AppMockupTransaksi,StepTransaksiDatas: StepTransaksiDatas,
             AppMockupModal: AppMockupModal1, StepModalDatas: StepModalDatas1,
-            // AppMockupModal1: AppMockupModal1, StepModalDatas1: StepModalDatas1,
-            // AppMockupModal2: AppMockupModal2, StepModalDatas2: StepModalDatas2,
-            // AppMockupModal3: AppMockupModal3, StepModalDatas3: StepModalDatas3,
             AppMockupPendapatan: AppMockupPendapatan,StepPendapatanDatas: StepPendapatanDatas,
             AppMockupLoket: AppMockupLoket,StepLoketDatas: StepLoketDatas,
 

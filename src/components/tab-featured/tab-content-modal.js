@@ -8,11 +8,13 @@ function StepItem(props){
             <button className="number" onClick={() => props.onClick(props.id)}>
                 <h5 className="text-bold">{props.id}</h5>
             </button>
-            <p className="body1">{props.text}</p>
-            <div className="button-wrapper" style={{display: props.id === 3 && 'flex'}}>
-                <button className={props.activeMethod === "pendapatan" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('pendapatan')}>Pendapatan</button>
-                <button className={props.activeMethod === "finpay" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('finpay')}>Finpay</button>
-                <button className={props.activeMethod === "va" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('va')}>Virtual Account</button>
+            <div className="__item">
+                <p className="body1">{props.text}</p>
+                <div className="button-wrapper" style={{display: props.id === 3 && 'flex'}}>
+                    <button className={props.activeMethod === "pendapatan" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('pendapatan')}>Pendapatan</button>
+                    <button className={props.activeMethod === "finpay" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('finpay')}>Finpay</button>
+                    <button className={props.activeMethod === "va" ? "btn-outlined active" : "btn-outlined"} onClick={() => props.onClickMethod('va')}>Virtual Account</button>
+                </div>
             </div>
         </div>
     )
@@ -54,7 +56,7 @@ class TabContentModal extends React.Component{
     render(){
         console.log(this.props)
         return(
-            <div className="container">
+            <div className="container __featured__mobile">
                 <div className="content-wrapper">
                     <StepLists 
                         StepDatas = {this.props.StepDatas} 
