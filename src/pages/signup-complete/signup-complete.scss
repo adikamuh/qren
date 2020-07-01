@@ -1,0 +1,77 @@
+.top-signup{
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner-signup-wrapper{
+        position: relative;
+
+        .__qr{
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: -1;
+            width: 481px;
+            height: 448px;
+            background-size: contain;
+
+            top: -5rem;
+            left: 3rem;
+        }
+
+        .banner-signup{
+            padding: 3rem 3rem;
+            padding-left: 25rem;
+            width: 1100px;
+            background: #ED1C24;
+            border-radius: 25px;
+            box-sizing: border-box;
+
+            h2{
+                margin: 0;
+                color: white;
+                line-height: 45px;
+                /* or 132% */
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.005em;
+                text-transform: uppercase;
+            }
+        }
+
+        img{
+            position: absolute;
+            top: -4rem;
+            left: 8rem;
+        }
+
+        .banner-body{
+            position: relative;
+            left: 25rem;
+            p{
+                width: 657px;
+                font-size: 18px;
+                line-height: 25px;
+                /* or 139% */
+
+                letter-spacing: 0.05em;
+
+                color: #4F4F4F;
+            }
+            .button-wrapper{
+                margin-top: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                .btn-primary{
+                    padding: 1.1rem 2rem;
+                    box-sizing: border-box;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

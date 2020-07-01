@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+import Select from 'react-select'
 import './form-signup-components.scss'
 import { Link } from 'react-router-dom'
 import OtpInput from "react-otp-input";
+import LabelInput from "label-inside-input-react";
+
 // import OTPInput from 'otp-input-react'
 
 
-
+import dropdownDown from '../../assets/dropdown-down.png'
 import rightArrow from '../../assets/right-arrow-white.png'
 import leftArrow from '../../assets/left-arrow-red.png'
 import eye from '../../assets/Inactive.png'
@@ -15,23 +18,47 @@ import information from '../../assets/information.png'
 
 function Step1Components(props){
     console.log(props)
+
+    const options = [
+        { value:"", label:"Kategori Toko" },
+        { value:"perseorangan", label:"Perseorangan" },
+        { value:"hukum", label:"Berbadan Hukum" },
+    ]
     return(
         <React.Fragment>
         <form onSubmit={(event) => event.preventDefault()}>
             <div className="form-group">
-                <input type="text" placeholder="Nama Lengkap (Sesuai KTP)" />
+                <LabelInput type="text" placeholder="Nama Lengkap (Sesuai KTP)" className="__inputText"/>
+                {/* <input type="text" placeholder="Nama Lengkap (Sesuai KTP)" /> */}
+            </div>
+
+            {/* <div className="form-group">
+                <Select options={options} width="1000px"/>
+            </div> */}
+
+            {/* <div className="form-group">
+                <select className="input-dropdown">
+                    <option value="">Kategori Toko</option>
+                    <option value="perseorangan">Perseorangan</option>
+                    <option value="hukum">Berbadan Hukum</option>
+                </select>
+                <span className="__dropdown_label">Kategori Toko</span>
+                <img src={dropdownDown} alt="" className="__dropdown" />
+            </div> */}
+
+            <div className="form-group">
+                <LabelInput type="text" placeholder="Nomor Handphone" className="__inputText"/>
+                {/* <input type="text" placeholder="Nomor Handphone" /> */}
             </div>
 
             <div className="form-group">
-                <input type="text" placeholder="Nomor Handphone" />
+                <LabelInput type="text" placeholder="Kode Referral (Tidak Wajib)" className="__inputText"/>
+                {/* <input type="text" placeholder="Kode Referral (Tidak Wajib)" /> */}
             </div>
 
             <div className="form-group">
-                <input type="text" placeholder="Kode Referral (Tidak Wajib)" />
-            </div>
-
-            <div className="form-group">
-                <input type="text" placeholder="Kode Referral (Tidak Wajib)" />
+                <LabelInput type="text" placeholder="Kode Referral (Tidak Wajib)" className="__inputText"/>
+                {/* <input type="text" placeholder="Kode Referral (Tidak Wajib)" /> */}
             </div>
 
             <div className="form-group">
@@ -97,17 +124,19 @@ function Step3Components(props){
             <p className="body1">Buat PIN baru untuk dapat masuk ke QRen menggunakan 6 angka</p>
             <form onSubmit={(event) => event.preventDefault()}>
                 <div className="form-group">
-                    <input 
+                    {/* <input 
                         placeholder="PIN"
                         type={paswordShown ? "text" : "password"}
-                    />
+                    /> */}
+                    <LabelInput type={paswordShown ? "text" : "password"} placeholder="PIN" className="__inputText"/>
                     <img src={eye} className="eye" alt="" onClick={togglePassword} />
                 </div>
                 <div className="form-group">
-                    <input 
+                    {/* <input 
                         placeholder="Konfirmasi PIN"
                         type={paswordShownConfirm ? "text" : "password"}
-                    />
+                    /> */}
+                    <LabelInput type={paswordShownConfirm ? "text" : "password"} placeholder="Konfirmasi PIN" className="__inputText"/>
                     <img src={eye} className="eye" alt="" onClick={togglePasswordConfirm} />
                 </div>
             </form>
@@ -122,6 +151,8 @@ function Step3Components(props){
 function Step4Components(props){
     const [isPerseorangan, setIsPerseorangan] = useState(false);
     const [isHukum, setIsHukum] = useState(false);
+
+    
 
     console.log(props)
     return(
@@ -150,46 +181,54 @@ function Step4Components(props){
 }
 
 function Step4ComponentsPerseorangan(props){
-    console.log(props)
+    const [isAgree, setIsAgree] = useState(false);
+    
+
     return(
         <div className="step4-perseorangan">
             <p className="body1" style={{textAlign: 'center'}}>Dengan melengkapi isian dibawah ini,<br/>toko Anda akan mendapatkan kesempatan promosi di aplikasi t-money!</p>
 
-            <form>
+            <form onSubmit={(event) => event.preventDefault()}>
                 <div className="form-group">
-                    <input type="text" placeholder="Nama Toko" />
+                    <LabelInput type="text" placeholder="Nama Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Nama Toko" /> */}
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="Alamat Toko" />
+                    <LabelInput type="text" placeholder="Alamat Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Alamat Toko" /> */}
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="Koordinat Toko" />
+                    <LabelInput type="text" placeholder="Koordinat Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Koordinat Toko" /> */}
+                    <button className="button btn-primary __map">BUKA MAP</button>
                 </div>
 
                 <div className="form-group">
-                    <select placeholder="Kategori Toko">
-                        <option></option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
+                    <select className="input-dropdown">
+                        <option value="">Kategori Toko</option>
+                        <option value="perseorangan">Perseorangan</option>
+                        <option value="hukum">Berbadan Hukum</option>
                     </select>
+                    <span className="__dropdown_label">Kategori Toko</span>
+                    <img src={dropdownDown} alt="" className="__dropdown" />
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="No. Handphone (untuk login)" />
+                    <LabelInput type="text" placeholder="No. Handphone (untuk login)" className="__inputText"/>
+                    {/* <input type="text" placeholder="No. Handphone (untuk login)" /> */}
                 </div>
 
                 <div className="check-form">
-                    <input type="checkbox" className="styled-checkbox"></input>
+                    <input type="checkbox" className="styled-checkbox" onClick={() => setIsAgree(!isAgree)}></input>
                     {/* <label></label> */}
                     <label className="body1">Dengan mengklik <span className="text-bold">Daftar</span> saya setuju dengan <Link to="">Syarat & Ketentuan</Link> yang berlaku.</label>
                 </div>
 
                 <div className="form-group">
                     <button className="button btn-pasive" onClick={() => props.setIsPerseorangan(false)} style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
-                    <button className="button btn-primary arrow">Daftar<img src={rightArrow} alt=""></img></button>
+                    <Link to="/signup-complete"><button className="button btn-primary arrow" disabled={!isAgree}>Daftar<img src={rightArrow} alt=""></img></button></Link>
                 </div>
             </form>
         </div>
@@ -197,38 +236,45 @@ function Step4ComponentsPerseorangan(props){
 }
 
 function Step4ComponentsHukum(props){
+    const [isAgree, setIsAgree] = useState(false);
     return(
         <div className="step4-perseorangan">
             <p className="body1" style={{textAlign: 'center'}}>Dengan melengkapi isian dibawah ini,<br/>toko Anda akan mendapatkan kesempatan promosi di aplikasi t-money!</p>
 
-            <form>
+            <form onSubmit={(event) => event.preventDefault()}>
                 <div className="form-group">
-                    <input type="text" placeholder="Nama Toko" />
+                    <LabelInput type="text" placeholder="Nama Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Nama Toko" /> */}
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="Alamat Toko" />
+                    <LabelInput type="text" placeholder="Alamat Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Alamat Toko" /> */}
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="Koordinat Toko" />
+                    <LabelInput type="text" placeholder="Koordinat Toko" className="__inputText"/>
+                    {/* <input type="text" placeholder="Koordinat Toko" /> */}
+                    <button className="button btn-primary __map" >BUKA MAP</button>
                 </div>
 
                 <div className="form-group">
-                    <select placeholder="Kategori Toko">
-                        <option></option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
+                    <select className="input-dropdown">
+                        <option value="">Kategori Toko</option>
+                        <option value="perseorangan">Perseorangan</option>
+                        <option value="hukum">Berbadan Hukum</option>
                     </select>
+                    <span className="__dropdown_label">Kategori Toko</span>
+                    <img src={dropdownDown} alt="" className="__dropdown" />
                 </div>
 
                 <div className="form-group">
-                    <input type="text" placeholder="No. Handphone (untuk login)" />
+                    <LabelInput type="text" placeholder="No. Handphone (untuk login)" className="__inputText"/>
+                    {/* <input type="text" placeholder="No. Handphone (untuk login)" /> */}
                 </div>
 
                 <div className="check-form">
-                    <input type="checkbox" className="styled-checkbox"></input>
+                    <input type="checkbox" className="styled-checkbox" onClick={() => setIsAgree(!isAgree)}></input>
                     {/* <label></label> */}
                     <label className="body1">Dengan mengklik <span className="text-bold">Daftar</span> saya setuju dengan <Link to="">Syarat & Ketentuan</Link> yang berlaku.</label>
                 </div>
@@ -249,7 +295,7 @@ function Step4ComponentsHukum(props){
 
                 <div className="form-group">
                     <button className="button btn-pasive" onClick={() => props.setIsHukum(false)} style={{marginRight: '1rem'}}><img src={leftArrow} alt=""/>Kembali</button>
-                    <button className="button btn-primary arrow">Daftar<img src={rightArrow} alt=""></img></button>
+                    <Link to="/signup-complete"><button className="button btn-primary arrow" disabled={!isAgree}>Daftar<img src={rightArrow} alt=""></img></button></Link>
                 </div>
             </form>
         </div>

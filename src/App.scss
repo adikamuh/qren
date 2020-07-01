@@ -38,7 +38,9 @@ body{
 .btn-primary:active{
   background: #B5151B;
 }
-
+.btn-primary:disabled{
+  background: #BDBDBD;
+}
 
 
 .btn-pasive{

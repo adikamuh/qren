@@ -58,6 +58,7 @@ class Carousel extends React.Component{
             slideToShow: 1,
             slidesToScroll: 1,
             initialSlide:0,
+            arrows: false,
             infinite: false,
             afterChange: this.updateCurrentSlide,
 

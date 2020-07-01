@@ -108,7 +108,7 @@ class FormSignup extends React.Component{
     render(){
         console.log(this.state.step)
         return(
-            <div>
+            <div className="signup-container">
                 <StepSignUp step={this.state.step}/>
                 <FormSignUpComponents {...this.state} handleClickKembali={this.handleClickKembali} handleClickLanjut={this.handleClickLanjut}/>
             </div>
