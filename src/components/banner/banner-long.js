@@ -3,12 +3,14 @@ import './banner-long.scss'
 
 import illustration from '../../assets/product-illustration.png'
 import phone from '../../assets/product-phone.png'
+import bgqr from '../../assets/qr-featured.png'
 
 class BannerLong extends React.Component{
     render(){
         return(
-            <div className="container" style={{marginTop: '5rem'}}>
+            <div className="container __bannerLong">
                 <div className="banner-long-wrapper">
+                    <div className="__bgQr" style={{backgroundImage: 'url('+bgqr+')'}} />
                     <img className="illustration-img" src={illustration} alt=""></img>
                     <img className="phone-img" src={phone} alt=""></img>
                     <div className="content">

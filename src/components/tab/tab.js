@@ -2,6 +2,8 @@ import React from 'react'
 import './tab.scss'
 import TabButton from './tab-button'
 
+import bgQR from '../../assets/qr-featured.png'
+
 class TabContent extends React.Component{
     render(){
         let styleP = {
@@ -65,15 +67,16 @@ class Tab extends React.Component{
 
         let styleContainer = {
             background: '#f8f8f8',
-            marginTop: '0',
+            marginTop: '-12rem',
             marginBottom: '0',
             padding: '7rem 0'
         }
 
         return(
-            <div className="container" style={styleContainer}>
+            <div className="container __tab" style={styleContainer}>
+                <div className="bgQR" style={{backgroundImage: 'url('+bgQR+')', display: this.props.isBgActive ? 'block' : 'none'}} />
 
-                <div className="tab-title" style={{margin: '5rem 8%'}}>
+                <div className="tab-title" >
                     <h2 className="text-bold title-tab" style={styleTitle}>{this.props.title}</h2>
                     <p className="body1" style={styleCaption}>{this.props.caption}</p>
                 </div>

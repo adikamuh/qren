@@ -7,7 +7,7 @@ import TabFeatured from '../../components/tab-featured/tab-featured'
 
 function BannerCoverFeatured(props){
     return(
-        <div className="container" style={{marginTop: '10rem'}}>
+        <div className="container __bannerFeatured" style={{marginTop: '10rem'}}>
             <div className="banner-long-featured-wrapper">
                 <img className="illustration-img" src={props.illustration} alt=""></img>
                 <div className="content">

@@ -75,3 +75,76 @@
         }
     }
 }
+
+@media screen and (max-width:425px){
+    .top-signup{display: none;}
+
+    .__top-signup{
+        display: block;
+        margin: 10rem 5%;
+        margin-top: 18rem;
+
+        box-sizing: border-box;
+        
+        .wrapper{
+            background: #ED1C24;
+            border-radius: 5px;
+
+            padding-top: 80px;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .banner-header{
+                position: absolute;
+                width: 253px;
+                height: 253px;
+                top: -8rem;
+
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                display: flex;
+                justify-content: center;
+                img{
+                    position: relative;
+                    top: -2rem;
+                    width: 50%;
+                }
+            }
+
+            .banner-body{
+                padding: 1.5rem;
+                text-align: center;
+                color: white;
+            }
+
+        }
+        .button-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            box-sizing: border-box;
+            a{
+                width: 100%;
+                box-sizing: border-box;
+
+                font-size: 14px;
+                letter-spacing: 0.1em;
+
+                padding: 1rem 0;
+                text-align: center;
+            }
+            .btn-pasive{
+                margin-top: 4rem;
+                justify-content: center;
+            }
+        }
+    }
+}

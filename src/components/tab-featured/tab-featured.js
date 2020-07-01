@@ -184,8 +184,8 @@ class TabFeatured extends React.Component{
         ]
 
         return(
-            <div>
-                <Tab btnDatas={TabDatas}/>
+            <div className="__featured">
+                <Tab btnDatas={TabDatas} isBgActive={true}/>
             </div>
         )
     }

@@ -10,6 +10,10 @@
         background-position: center;
         overflow: hidden;
         box-sizing: border-box;
+
+        z-index: 2;
+
+        margin-top: -3.5rem;
         // background-size: 150%;
     }
     
@@ -28,6 +32,11 @@
             align-items: center;
             justify-content: flex-start;
             // overflow-x: hidden;
+
+            .__item{
+                display: flex;
+                align-items: center;
+            }
 
             .number{
                 position: relative;
@@ -74,18 +83,20 @@
             }
 
             .button-wrapper{
+                position: relative;
                 float: right;
-                margin-left: 2rem;
+                // margin-left: 2rem;
+                left: 1rem;
                 display: none;
                 // align-items: center;
                 justify-content: flex-start;
                 
                 .btn-outlined{
                     position: relative;
-                    width: 141px;
+                    width: 125px;
                     height: 44px;
                     font-family: Ubuntu;
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 22px;
                     /* identical to box height, or 137% */
 
@@ -144,12 +155,12 @@
     }
     .content-wrapper{
         .mockup{
-            height: 230px;
-            background-size: 190%;
+            height: 250px;
+            background-size: 180%;
         }
 
         .step-list{
-            margin-top: 0.5rem;
+            margin-top: -3rem;
 
             .line-vertical{
                 margin-left: 0.7rem;
@@ -178,8 +189,10 @@
                     letter-spacing: 0.01em;
                 }
 
+                .__item{display: block;}
+
                 .button-wrapper{
-                    margin-left: 0em;
+                    left: 0;
                     .btn-outlined{
                         width: 53px;
                         height: 20px;
